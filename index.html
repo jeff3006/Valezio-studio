@@ -934,23 +934,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.querySelector(".close-button");
   const overlay = document.getElementById("menuOverlay");
 
+  console.log("DOM ready");
   if (burger && menu && closeBtn && overlay) {
+    console.log("All elements found");
+
     burger.addEventListener("click", () => {
+      console.log("Burger clicked");
       menu.classList.toggle("show");
       burger.classList.toggle("active");
       overlay.classList.toggle("show");
     });
 
     closeBtn.addEventListener("click", () => {
+      console.log("Close button clicked");
       menu.classList.remove("show");
       burger.classList.remove("active");
       overlay.classList.remove("show");
     });
 
     overlay.addEventListener("click", () => {
+      console.log("Overlay clicked");
       menu.classList.remove("show");
       burger.classList.remove("active");
       overlay.classList.remove("show");
+    });
+  } else {
+    console.warn("One or more elements not found:", {
+      burger, menu, closeBtn, overlay
     });
   }
 
