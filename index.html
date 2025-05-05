@@ -151,7 +151,7 @@
   background-color: #D4AF37;
   color: #0F0F0F;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 12px;
   padding: 5px 0;
   letter-spacing: 0.5px;
 }
@@ -184,7 +184,7 @@
   color: #D4AF37;
 }
 .vs-header-cta {
-  margin-top: 10px;
+  margin-top: 6px;
   text-align: center;
   width: 100%;
 }
@@ -283,66 +283,169 @@ footer a:hover {
   transition: all 0.3s ease;
 }
 #valezio-chat-trigger:hover {
+  background-color: #B8902B;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
   transition: all 0.3s ease;
 }
 </style>
+<style>
+.footer-col h4::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #D4AF37;
+  opacity: 0.6;
+  margin: 0 auto 4px auto;
+}
+</style><link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-<header>
-<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; background-color: #0F0F0F; padding: 15px 30px; border-bottom: 1px solid #2E2E2E;">
-<a href="index.html"><img alt="Valezio Logo" src="https://i.ibb.co/vXkF10D/logo-valezio-blanc.png" style="height:50px;"/></a>
-<nav class="desktop-menu" style="display: flex; flex-wrap: wrap; gap: 22px;">
-<a href="index.html">Accueil</a><a href="valezio-realisations.html">Nos Réalisations</a><a href="valezio-blog.html">Blog</a>
-<a href="valezio-avant-apres.html">Avant / Après</a>
-<a href="valezio-tarifs-experiences.html">Tarifs &amp; Expériences</a>
-<a href="valezio-formulaire-experience.html">Créez votre expérience</a>
-<a href="valezio-ame-de-valezio.html">L’âme de Valezio</a>
-<a href="valezio-questions-frequentes.html">Questions fréquentes</a>
-<a href="valezio-contact.html">Contactez notre équipe</a>
-<a class="vs-button" href="valezio-formulaire-experience.html" style="margin-left: 15px; align-self: center;">Recevoir mon relooking</a>
-</nav>
-<div class="burger" onclick="document.querySelector('.mobile-menu').classList.toggle('show');" style="font-size: 26px; color: white; display: none;">☰</div>
-</div>
-<div class="mobile-menu" style="display: none; flex-direction: column; background-color: #0F0F0F; padding: 20px; text-align: center;">
+<header class="vs-header">
+<div class="vs-header-topbar">Relookez sans stress. Sublimez sans travaux. Vivez Valezio.</div>
+<div class="vs-header-main">
+<a href="index.html"><img alt="Valezio Logo" class="vs-logo" src="logo-valezio.PNG"/></a>
+<nav class="vs-nav">
 <a href="index.html">Accueil</a>
+<a href="valezio-realisations.html">Nos Réalisations</a>
 <a href="valezio-avant-apres.html">Avant / Après</a>
-<a href="valezio-tarifs-experiences.html">Tarifs &amp; Expériences</a>
-<a href="valezio-formulaire-experience.html">Créez votre expérience</a>
-<a href="valezio-ame-de-valezio.html">L’âme de Valezio</a>
+<a href="valezio-tarifs-experiences.html">Tarifs</a>
+<a href="valezio-formulaire-experience.html">Formules</a>
+<a href="valezio-ame-de-valezio.html">Notre Vision</a>
+<a href="valezio-blog.html">Blog</a>
 <a href="valezio-questions-frequentes.html">Questions fréquentes</a>
-<a href="valezio-contact.html">Contactez notre équipe</a>
-<a href="valezio-conditions-service.html">Conditions de service</a>
-<a href="valezio-donnees-confidentielles.html">Protection des données</a>
-<a href="valezio-informations-officielles.html">Informations officielles</a>
+<a href="valezio-contact.html">Contact</a>
+</nav>
+<div class="burger-icon" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+<div class="burger-label">MENU</div>
 </div>
-<style>
-    @media (max-width: 768px) {
-      .desktop-menu { display: none !important; }
-      .burger { display: block !important; }
-      .mobile-menu.show { display: flex !important; }
-      .mobile-menu a {
-        color: white;
-        text-decoration: none;
-        padding: 8px 0;
-      }
-      .mobile-menu a:hover {
-        color: #D4AF37;
-      }
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-    }
-    nav a:hover {
-      color: #D4AF37;
-    }
-  </style>
+</div>
+<div class="mobile-menu-panel" id="mobileMenu">
+<div class="close-button" onclick="toggleMenu()">×</div>
+<a href="index.html">Accueil</a>
+<a href="valezio-realisations.html">Nos Réalisations</a>
+<a href="valezio-avant-apres.html">Avant / Après</a>
+<a href="valezio-tarifs-experiences.html">Tarifs</a>
+<a href="valezio-formulaire-experience.html">Formules</a>
+<a href="valezio-ame-de-valezio.html">Notre Vision</a>
+<a href="valezio-blog.html">Blog</a>
+<a href="valezio-questions-frequentes.html">Questions fréquentes</a>
+<a href="valezio-contact.html">Contact</a>
+</div>
 </header>
+<style>
+.vs-header-topbar {
+  text-align: center;
+  background-color: #D4AF37;
+  color: #0F0F0F;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5px 0;
+  letter-spacing: 0.5px;
+}
+.vs-header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+  background-color: #0F0F0F;
+  border-bottom: 1px solid #2E2E2E;
+}
+.vs-logo {
+  height: 50px;
+}
+.vs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.vs-nav a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+.vs-nav a:hover {
+  color: #D4AF37;
+  border-bottom: 1px solid #D4AF37;
+}
+.burger-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.burger-icon span {
+  width: 24px;
+  height: 2px;
+  background-color: #D4AF37;
+  display: block;
+  transition: all 0.3s ease;
+}
+.burger-label {
+  font-size: 10px;
+  color: #D4AF37;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+.mobile-menu-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100%;
+  background-color: #0F0F0F;
+  box-shadow: -8px 0 30px rgba(0,0,0,0.5);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9999;
+  transition: right 0.4s ease;
+}
+.mobile-menu-panel.show {
+  right: 0;
+}
+.mobile-menu-panel a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.mobile-menu-panel a:hover {
+  color: #D4AF37;
+}
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: #D4AF37;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .vs-nav { display: none; }
+  .burger-icon { display: flex; }
+}
+</style>
+<script>
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('show');
+}
+</script>
+
+
 <main>
 <!-- HERO -->
 <section class="hero">
@@ -438,7 +541,7 @@ footer a:hover {
 <style>
   .footer-wrapper {
     background-color: #0F0F0F;
-    padding: 60px 20px;
+    padding: 40px 20px;
     border-top: 1px solid #333;
     font-family: 'Poppins', sans-serif;
   }
@@ -452,7 +555,7 @@ footer a:hover {
     font-style: italic;
     text-align: center;
     font-size: 1em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .footer-columns {
     display: flex;
@@ -493,16 +596,16 @@ footer a:hover {
     background-color: #D4AF37;
     color: #0F0F0F;
     border: none;
-    padding: 10px 20px; margin-top: 18px;
+    padding: 8px 16px; margin-top: 6px;
     font-weight: bold;
-    font-size: 13px;
-    border-radius: 50px;
+    font-size: 12px;
+    border-radius: 18px;
     cursor: pointer;
     max-width: 240px;
     animation: pulse 2s infinite;
   }
   .footer-bottom {
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
     padding-top: 10px;
     border-top: 1px solid #333;
@@ -531,9 +634,7 @@ footer a:hover {
   }
 </style>
 <footer class="footer-wrapper">
-<hr/>
 <p class="intro">Votre pièce préférée n’existe pas encore.</p>
-<hr/>
 <div class="footer-columns">
 <div class="footer-col">
 <h4>Liens utiles</h4>
@@ -551,13 +652,9 @@ footer a:hover {
 </div>
 <div class="footer-col">
 <h4>Contact</h4>
-<p style="color: white; margin-bottom: 16px;">contact@valezio.com</p>
+<p style="color: white; margin-bottom: 20px;"><a href="mailto:contact@valezio.com" style="color: white; text-decoration: none;">contact@valezio.com</a></p>
 <div class="cta-label" style="margin-bottom: 4px;">Besoin d’un conseil ?</div>
-<button id="valezio-chat-trigger" style="background-color: #D4AF37; color: #0F0F0F; border: none; padding: 10px 20px; font-weight: bold; font-size: 13px; border-radius: 50px; cursor: pointer; width: 100%; margin-top: 18px;">Je vous aide à choisir votre formule</button><p style="color:#E5E5E5; font-size: 0.75em; margin-top: 16px; text-align: center;">100% en ligne – Service sécurisé – Disponible dans le monde entier</p></div>
-</div>
-<div class="footer-bottom">
-<p style="color:#D4AF37;"><strong>© 2025 Valezio Studio</strong> – Tous droits réservés.</p>
-<p style="color:#D4AF37;">Un relooking, une transformation, une émotion. Sans stress.</p>
+<button id="valezio-chat-trigger" style="background-color: #D4AF37; color: #0F0F0F; border: none; padding: 8px 16px; font-weight: bold; font-size: 12px; border-radius: 18px; cursor: pointer; width: 100%; margin-top: 6px;">Je vous aide à choisir votre formule</button><p style="color:#E5E5E5; font-size: 0.75em; margin-top: 20px; text-align: center;">100% en ligne – Service sécurisé – Disponible dans le monde entier</p><p style="color:#D4AF37; font-size: 0.8em; margin: 25px 0 4px; text-align: center;"><span style="font-family: 'Lora', serif; font-style: italic; display: inline-block;">Un relooking, une transformation, une émotion. Sans stress.</span></p><p style="color:#D4AF37; font-size: 0.85em; margin: 10px 0 0 0; text-align: center;">© 2025 Valezio Studio – Tous droits réservés.</p></div>
 </div>
 </footer>
 <script>
