@@ -319,6 +319,21 @@ footer a:hover {
   margin: 0 auto 4px auto;
 }
 </style><link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;display=swap" rel="stylesheet"/>
+
+<style>
+.burger-icon {
+  display: flex !important;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(255, 0, 0, 0.3); /* visible debug background */
+  z-index: 9999;
+  padding: 10px;
+}
+</style>
+
 </head>
 <body>
 <header class="vs-header">
@@ -747,6 +762,27 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         console.warn("Chatbase non encore chargé.");
       }
+    });
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".burger-icon");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.querySelector(".close-button");
+
+  if (burger && menu && closeBtn) {
+    burger.addEventListener("click", () => {
+      console.log("Burger cliqué");
+      menu.classList.toggle("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      console.log("Fermeture menu");
+      menu.classList.remove("show");
     });
   }
 });
