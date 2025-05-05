@@ -156,10 +156,15 @@
   color: #0F0F0F;
   font-weight: bold;
   font-size: 12px;
-  padding: 5px 0;
-  letter-spacing: 0.5px;
+  padding: 4px 0;
+  letter-spacing: 0.3px;
 }
 .vs-header-main {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  margin-top: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -221,6 +226,11 @@
 
 
 .vs-header-main {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  margin-top: 6px;
   padding-bottom: 0 !important;
 }
 .hero {
@@ -286,6 +296,11 @@ footer a:hover,
   text-decoration: underline !important;
 }
 
+
+.vs-header-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 </style>
 <style>
 @keyframes pulse {
@@ -293,6 +308,11 @@ footer a:hover,
   70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
   100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
+
+.vs-header-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 </style>
 <style>
 footer a:hover {
@@ -307,6 +327,11 @@ footer a:hover {
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
   transition: all 0.3s ease;
 }
+
+.vs-header-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 </style>
 <style>
 .footer-col h4::before {
@@ -318,6 +343,11 @@ footer a:hover {
   opacity: 0.6;
   margin: 0 auto 4px auto;
 }
+
+.vs-header-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 </style><link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
@@ -336,13 +366,13 @@ footer a:hover {
 <a href="valezio-questions-frequentes.html">Questions fréquentes</a>
 <a href="valezio-contact.html">Contact</a>
 </nav>
-<div class="burger-icon" onclick="toggleMenu()">
+<div class="burger-icon" >
 <span></span><span></span><span></span>
 <div class="burger-label">MENU</div>
 </div>
 </div>
 <div class="mobile-menu-panel" id="mobileMenu">
-<div class="close-button" onclick="toggleMenu()">×</div>
+<div class="close-button" >×</div>
 <a href="index.html">Accueil</a>
 <a href="valezio-realisations.html">Nos Réalisations</a>
 <a href="valezio-avant-apres.html">Avant / Après</a>
@@ -360,11 +390,16 @@ footer a:hover {
   background-color: #D4AF37;
   color: #0F0F0F;
   font-weight: bold;
-  font-size: 13px;
-  padding: 5px 0;
-  letter-spacing: 0.5px;
+  font-size: 12px;
+  padding: 4px 0;
+  letter-spacing: 0.3px;
 }
 .vs-header-main {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  margin-top: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -456,6 +491,11 @@ footer a:hover {
   .vs-nav { display: none; }
   .burger-icon { display: flex; }
 }
+
+.vs-header-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 </style>
 
 
@@ -646,6 +686,11 @@ footer a:hover {
       text-align: left;
     }
   }
+
+.vs-header-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 </style>
 <footer class="footer-wrapper">
 <p class="intro">Votre pièce préférée n’existe pas encore.</p>
@@ -691,6 +736,11 @@ footer a:hover {
   70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
   100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
+
+.vs-header-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 </style><script>
 document.addEventListener("DOMContentLoaded", function() {
   const trigger = document.getElementById("valezio-chat-trigger");
@@ -717,6 +767,48 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     closeBtn.addEventListener("click", () => {
       menu.classList.remove("show");
+    });
+  }
+});
+</script>
+
+
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".vs-header-main");
+  if (window.scrollY > 10) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const burger = document.querySelector(".burger-icon");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.querySelector(".close-button");
+
+  if (burger && menu && closeBtn) {
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("show");
+    });
+  }
+
+  const trigger = document.getElementById("valezio-chat-trigger");
+  if (trigger) {
+    trigger.addEventListener("click", function () {
+      if (window.Chatbase) {
+        window.Chatbase.openChat();
+      } else {
+        console.warn("Chatbase non encore chargé.");
+      }
     });
   }
 });
