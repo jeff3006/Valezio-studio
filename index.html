@@ -1,849 +1,597 @@
+
 <!DOCTYPE html>
 
 <html lang="fr">
-<head><style>
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-</style>
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Relooking intérieur en 45 minutes | Valezio Studio</title>
-<link href="/assets/css/style.css" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Valezio Studio – Page d’accueil complète</title>
 <style>
-    body {
-      background-color: #0F0F0F;
-      color: white;
-      font-family: 'Poppins', sans-serif;
+    html, body {
+      height: 100%;
       margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0F0F0F;
+      color: #FFFFFF;
     }
-    header, section, footer {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #D4AF37;
-    }
-    a.cta-button {
-      background-color: #D4AF37;
-      color: #000;
-      padding: 12px 24px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    a.cta-button:hover {
-      background-color: #B8902B;
-    }
-    ul, ol {
-      padding-left: 20px;
-    }
-    .avant-apres {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .avant-apres .bloc {
-      width: 280px;
-    }
-    .avant-apres img {
-      width: 100%;
-      border: 2px solid #D4AF37;
-    }
-    .avant-apres label {
-      display: block;
-      text-align: center;
-      margin-top: 5px;
-      font-weight: bold;
-    }
-    form {
-      background-color: #1A1A1A;
-      padding: 30px;
-      border: 1px solid #D4AF37;
-      border-radius: 10px;
-    }
-    form label {
-      display: block;
-      margin-top: 15px;
-    }
-    form input, form select, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      background-color: #333;
-      color: white;
-      border: 1px solid #555;
-    }
-    form .checkbox-group {
+    body {
       display: flex;
       flex-direction: column;
     }
-    form button {
-      background-color: #D4AF37;
-      color: black;
-      border: none;
-      padding: 12px 24px;
-      font-weight: bold;
+    main {
+      flex: 1;
+    }
+    h2 {
+      text-align: center;
+      color: #D4AF37;
+      margin: 40px 0 20px;
+    }
+    p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .hero {
+      background-image: url('https://via.placeholder.com/1600x800?text=Votre+nouveau+salon');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      color: white;
+      text-shadow: 0 0 10px black;
+      padding: 0 20px;
+    }
+    .cta-button {
+      display: inline-block;
       margin-top: 20px;
-      cursor: pointer;
+      padding: 15px 25px;
+      background: #D4AF37;
+      color: #0F0F0F;
+      font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
     }
-    form button:hover {
-      background-color: #B8902B;
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 5px;
+      scroll-snap-type: x mandatory;
+      padding: 20px 10px;
     }
-    .small {
-      font-size: 0.85em;
-      color: #ccc;
-      margin-top: 10px;
+    .carousel img {
+      height: 250px;
+      border-radius: 8px;
+      scroll-snap-align: center;
     }
-  </style>
-<meta content="Recevez un relooking complet de votre pièce à distance en moins d’une heure. Élégance, rapidité, et simplicité avec Valezio Studio." name="description"/><meta content="Votre relooking intérieur clé-en-main, livré en 45 minutes" property="og:title"/><meta content="Sans déménagement. Sans travaux. Une nouvelle vie pour votre intérieur depuis WhatsApp." property="og:description"/><meta content="https://valezio.com/assets/images/preview.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Relooking intérieur express - Valezio Studio" name="twitter:title"/><meta content="Transformez votre pièce sans travaux, sans stress." name="twitter:description"/><meta content="https://valezio.com/assets/images/preview.jpg" name="twitter:image"/><link href="https://valezio.com/" hreflang="fr" rel="alternate"/><link href="https://valezio.com/en/" hreflang="en" rel="alternate"/><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Valezio Studio",
-  "url": "https://valezio-studio.com",
-  "logo": "https://valezio-studio.com/assets/images/logo.png",
-  "description": "Service de relooking d’intérieur haut de gamme livré via WhatsApp en moins de 45 minutes. Sans travaux.",
-  "sameAs": []
-}
-</script><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
-<!-- Meta Pixel -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', 'XXXXXXXXXXXXXXX'); 
-  fbq('track', 'PageView');
-</script>
-<noscript><img alt="Illustration relooking Valezio" height="1" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
-<!-- Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-<style>
-@media (max-width: 768px) {
-  .responsive-padding {
-    padding: 20px 10px !important;
-  }
-}
-</style>
-<meta content="Relooking intérieur haut de gamme en ligne - Valezio Studio" property="og:title"/><meta content="Transformez votre intérieur en moins d'une heure avec notre service de relooking à distance." property="og:description"/><meta content="website" property="og:type"/><meta content="https://valezio-studio.com/" property="og:url"/><meta content="https://valezio-studio.com/images/og-image.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Relooking intérieur haut de gamme en ligne - Valezio Studio" name="twitter:title"/><meta content="Transformez votre intérieur en moins d'une heure avec notre service de relooking à distance." name="twitter:description"/><meta content="https://valezio-studio.com/images/og-image.jpg" name="twitter:image"/>
-<script>
-(function() {
-  var lang = navigator.language || navigator.userLanguage;
-  if (lang.startsWith('en')) window.location.href = '/en/01-home.html';
-  else if (lang.startsWith('de')) window.location.href = '/de/01-startseite.html';
-  else if (lang.startsWith('it')) window.location.href = '/it/01-homepage.html';
-  else if (lang.startsWith('pt')) window.location.href = '/pt/01-inicio.html';
-  else if (lang.startsWith('he')) window.location.href = '/he/01-דף-ראשי.html';
-  else if (lang.startsWith('ar')) window.location.href = '/ar/01-الرئيسية.html';
-  else if (lang.startsWith('es')) window.location.href = '/es/01-inicio.html';
-  else if (lang.startsWith('nl')) window.location.href = '/nl/01-start.html';
-  else if (lang.startsWith('tr')) window.location.href = '/tr/01-anasayfa.html';
-  else if (lang.startsWith('ru')) window.location.href = '/ru/01-glavnaya.html';
-})();
-</script>
-<style>
-@media (min-width: 768px) {
-  section {
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
-  }
-
-  #temoignages {
-    margin-bottom: 10px !important;
-  }
-
-  #hero {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-  }
-
-  #comment-ca-marche {
-    margin-top: 10px !important;
-  }
-}
-</style><style>
-header nav a {
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin: 0 18px;
-  letter-spacing: 1px;
-  font-weight: 300;
-  transition: color 0.3s ease;
-}
-header nav a:hover {
-  color: #D4AF37;
-}
-header nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-header {
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      text-align: center;
+    }
+    .steps div {
+      flex: 1 1 200px;
+      max-width: 250px;
+    }
+    .formules {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+    .formule-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      width: 260px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+    .formule-card h3 {
+      color: #D4AF37;
+    }
+    .formule-card .cta-button {
+      margin-top: 15px;
+    }
+    .testimonials {
+      display: flex;
+      overflow-x: auto;
+      gap: 5px;
+      padding: 20px;
+    }
+    .testimonial {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      min-width: 250px;
+      max-width: 300px;
+    }
+    .brands {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .brands img {
+      height: 40px;
+      opacity: 0.7;
+    }
+    .faq-item {
+      background-color: #1a1a1a;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    footer {
+      background-color: #0F0F0F;
+      padding: 30px 20px;
+      border-top: 1px solid #333;
+      color: #D4AF37;
+      text-align: center;
+      font-size: 0.95em;
+    }
+  
+.vs-header {
   background-color: #0F0F0F;
-  padding: 25px 0;
   border-bottom: 1px solid #222;
 }
-</style><style>
-header a {
-  transition: all 0.3s ease;
-}
-header a:hover {
-  color: #B8902B;
-  border-bottom: 1px solid #B8902B;
-}
-</style><style>
-footer a {
-  transition: all 0.3s ease;
-}
-footer a:hover {
-  color: #B8902B;
-  text-decoration: underline;
-}
-</style><style>
-    .faq-question {
-      background: none;
-      color: #D4AF37;
-      font-weight: bold;
-      font-size: 1em;
-      text-align: left;
-      padding: 15px;
-      border: none;
-      width: 100%;
-      cursor: pointer;
-      border-bottom: 1px solid #333;
-    }
-
-    .faq-answer {
-      display: none;
-      color: #E5E5E5;
-      padding: 15px;
-      font-size: 0.95em;
-      border-bottom: 1px solid #333;
-    }
-
-    .faq-item.open .faq-answer {
-      display: block;
-    }
-    </style><style>
-header a {
-  transition: all 0.3s ease;
-}
-header a:hover {
-  color: #B8902B;
-  border-bottom: 1px solid #B8902B;
-}
-</style>
-<style>
-.pulsing-button {
-  animation: pulseButton 2.5s infinite;
-}
-@keyframes pulseButton {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
-  70% { transform: scale(1.05); box-shadow: 0 0 10px 10px rgba(212, 175, 55, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-}
-</style>
-<style>
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: #0F0F0F;
-}
-</style>
-<style>
-.img-zoom {
-  cursor: zoom-in;
-  transition: transform 0.3s ease;
-}
-.img-zoom:hover {
-  transform: scale(1.02);
-}
-</style>
-<style>
-.footer-link:hover {
-  color: #FFFFFF !important;
-  text-decoration: underline;
-  transition: all 0.3s ease;
-}
-.testimonial-card:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
-}
-.steps-list li {
-  margin-bottom: 15px;
-  font-size: 1.1em;
-  color: #E5E5E5;
-  line-height: 1.6;
-}
-</style><style>
-@media (max-width: 768px) {
-  h1, h2, h3 {
-    font-size: 1.6em !important;
-    text-align: center;
-  }
-  .btn-primary-valeziostudio {
-    width: 100% !important;
-    font-size: 1em !important;
-  }
-  .testimonial-card {
-    width: 90% !important;
-    margin: 10px auto !important;
-  }
-  .steps-list li {
-    font-size: 1em !important;
-    padding-left: 10px;
-  }
-  .avant-apres-title,
-  .avant-apres-subtitle {
-    text-align: center;
-    padding: 0 10px;
-  }
-}
-</style><style>
-.mini-faq-float {
-  position: fixed;
-  bottom: 85px;
-  left: 20px;
-  background: rgba(255,255,255,0.07);
-  color: #E5E5E5;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 0.85em;
-  z-index: 9998;
-  backdrop-filter: blur(10px);
-}
-@media (max-width: 768px) {
-  .mini-faq-float {
-    font-size: 0.8em;
-    padding: 8px 12px;
-  }
-}
-</style><style>
-section {
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-.testimonial-card {
-  border: 1px solid rgba(212,175,55,0.25);
-}
-</style></head>
-<body>
-<div class="mini-faq-float">Besoin d'aide ? Toutes les réponses sont dans notre FAQ.</div><div class="bande-rarete">13 créneaux restants aujourd’hui</div>
-<style>
-.bande-rarete {
+.vs-header-topbar {
+  text-align: center;
   background-color: #D4AF37;
   color: #0F0F0F;
-  text-align: center;
-  padding: 8px 0;
   font-weight: bold;
-  font-size: 14px;
-  animation: flashRarete 3s infinite ease-in-out;
+  font-size: 13px;
+  padding: 5px 0;
+  letter-spacing: 0.5px;
 }
-@keyframes flashRarete {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-</style>
-<header class="valeziostudio-header" style="text-align: center; padding: 30px 20px; background-color: rgba(15,15,15,0.95); border-bottom: 1px solid #333;">
-<nav class="primary" style="margin-bottom: 10px;">
-<img alt="Valezio Studio Logo" src="logo-valezio.png" style="height: 55px; margin-right: 20px; vertical-align: middle;"/>
-<a href="index.html#section-formules" style="color: #D4AF37; font-weight: 600; text-decoration: none; text-transform: uppercase; margin: 0 20px; letter-spacing: 0.08em;">Formules</a>
-<a href="index.html#section-avant-apres" style="color: #D4AF37; font-weight: 600; text-decoration: none; text-transform: uppercase; margin: 0 20px; letter-spacing: 0.08em;">Avant/Après</a>
-<a href="index.html#section-temoignages" style="color: #D4AF37; font-weight: 600; text-decoration: none; text-transform: uppercase; margin: 0 20px; letter-spacing: 0.08em;">Témoignages</a>
-<a href="09-qui-sommes-nous.html" style="color: #D4AF37; font-weight: 600; text-decoration: none; text-transform: uppercase; margin: 0 20px; letter-spacing: 0.08em;">Qui sommes-nous</a>
-</nav>
-<nav class="secondary"><a href="formulaire-valezio-experience-luxe.html" style="color: #B8902B; font-size: 0.9em; margin: 0 10px;">Formulaire</a>
-<a href="index.html#section-faq" style="color: #B8902B; font-size: 0.9em; margin: 0 10px;">FAQ</a>
-<a href="https://wa.me/33600000000" style="color: #B8902B; font-size: 0.9em; margin: 0 10px;" target="_blank">Contact</a></nav>
-</header>
-<section class="valeziostudio-hero-section" id="section-hero" style="position: relative; min-height: auto; display: flex; align-items: start; justify-content: center; text-align: center; background: linear-gradient(to bottom, #0F0F0F, #121212); width: 100%; max-width: 95vw; padding: 10px 5vw 10px 5vw;">
-<div style="position: relative; z-index: 2; padding: 20px;">
-<h1 style="color: white; font-size: 2.5em; margin-bottom: 20px;">Offrez une nouvelle âme à votre intérieur</h1>
-<p style="color: #E5E5E5; font-size: 1.2em; max-width: 600px; margin: auto;">Un relooking premium, livré en 45 minutes, sans travaux, sans déplacement. Transformez votre pièce depuis WhatsApp.</p>
-<a class="btn-primary-valeziostudio pulsing-button" href="formulaire-luxe-valezio-corrige.html#valezio-formulaire" id="hero-main-cta" style="margin-top: 30px; display: inline-block; padding: 15px 30px; background-color: #D4AF37; color: #0F0F0F; font-weight: bold; text-decoration: none; border-radius: 5px;" title="Recevoir votre relooking en moins d'une heure">Recevoir mon relooking maintenant</a>
-</div>
-</section>
-
-
-
-
-
-<style>
-@keyframes scrollCarousel {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
-
-<section class="valeziostudio-avant-apres" id="section-avant-apres" style="padding: 100px 20px; background-color: #0F0F0F;">
-<h2 class="avant-apres-title" style="color: #D4AF37; font-size: 2.3em; text-align: center; margin-bottom: 60px; letter-spacing: 1px;">
-    Avant / Après : redécouvrez votre intérieur
-  </h2>
-<p class="avant-apres-subtitle" style="text-align: center; color: #E5E5E5; font-size: 1.1em; max-width: 800px; margin: 0 auto 70px auto;">
-    Chaque transformation est unique. Glissez les images pour découvrir le pouvoir de notre relooking instantané.
-  </p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
-<!-- Comparateur 1 -->
-<div class="comparison-container" style="flex: 1 1 450px;">
-<div class="comparison-after"><img alt="Après 1" src="apres1.png"/></div>
-<div class="comparison-before"><img alt="Avant 1" class="before-img" src="avant1.png"/></div>
-<div class="comparison-slider"></div>
-<div class="label left">Avant</div>
-<div class="label right">Après</div>
-</div>
-<!-- Comparateur 2 -->
-<div class="comparison-container" style="flex: 1 1 450px;">
-<div class="comparison-after"><img alt="Après 2" src="apres2.png"/></div>
-<div class="comparison-before"><img alt="Avant 2" class="before-img" src="avant2.png"/></div>
-<div class="comparison-slider"></div>
-<div class="label left">Avant</div>
-<div class="label right">Après</div>
-</div>
-<!-- Comparateur 3 -->
-<div class="comparison-container" style="flex: 1 1 450px;">
-<div class="comparison-after"><img alt="Après 3" src="apres3.png"/></div>
-<div class="comparison-before"><img alt="Avant 3" class="before-img" src="avant3.png"/></div>
-<div class="comparison-slider"></div>
-<div class="label left">Avant</div>
-<div class="label right">Après</div>
-</div>
-<!-- Comparateur 4 -->
-<div class="comparison-container" style="flex: 1 1 450px;">
-<div class="comparison-after"><img alt="Après 4" src="apres4.png"/></div>
-<div class="comparison-before"><img alt="Avant 4" class="before-img" src="avant4.png"/></div>
-<div class="comparison-slider"></div>
-<div class="label left">Avant</div>
-<div class="label right">Après</div>
-</div>
-</div>
-</section>
-<section id="section-carrousel" style="padding: 80px 20px; background-color: #0F0F0F; overflow: hidden;">
-  <h2 style="color: #D4AF37; text-align: center; margin-bottom: 30px;">Avis clients en images</h2>
-  <div class="carousel-wrapper" style="width: 100%; overflow: hidden; position: relative;">
-    <div class="carousel-track" style="display: flex; gap: 16px; animation: scrollAuto 12s linear infinite; width: max-content;">
-      <img src="https://i.postimg.cc/R6ZJxw4Z/37782-AD8-AF1-E-49-E8-B2-E6-E7-DAA42-EF618.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/hh3TgZJW/38-B15-CCF-7780-40-B1-8145-800184-D0-F4-CC.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/D89G4Wdx/Eliep.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/t127k7WQ/Hervet.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/SjKCBbxf/Katy.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/jDYWdpt9/Nn.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/4nnH8vW8/Renem.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/k6GGp9vV/Steevel.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/2Vbv5dvq/Teno.png" alt="" style="height: 220px; border-radius: 8px;">
-      <img src="https://i.postimg.cc/QVP9vBPj/Tomer.png" alt="" style="height: 220px; border-radius: 8px;">
-    </div>
-  </div>
-</section>
-<style>
-@keyframes scrollAuto {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const containers = document.querySelectorAll('.comparison-container');
-  containers.forEach(container => {
-    const slider = container.querySelector('.comparison-slider');
-    const beforeImg = container.querySelector('.before-img');
-
-    function moveSlider(e, touch = false) {
-      const rect = container.getBoundingClientRect();
-      const x = (touch ? e.touches[0].clientX : e.clientX) - rect.left;
-      const width = container.offsetWidth;
-      const percent = Math.max(0, Math.min(x / width, 1)) * 100;
-      beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-      slider.style.left = `${percent}%`;
-    }
-
-    container.addEventListener('mousemove', e => moveSlider(e));
-    container.addEventListener('touchmove', e => moveSlider(e, true));
-  });
-});
-</script>
-<style>
-.comparison-container {
-  position: relative;
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 2px solid #D4AF37;
-  border-radius: 12px;
-}
-
-.comparison-container img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.comparison-slider {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 3px;
-  background-color: #D4AF37;
-  cursor: ew-resize;
-  z-index: 2;
-}
-
-.comparison-before,
-.comparison-after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.comparison-after {
-  z-index: 1;
-}
-
-.comparison-before {
-  z-index: 2;
-  overflow: hidden;
-}
-
-.comparison-before img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: block;
-  clip-path: inset(0 50% 0 0);
-}
-
-.label {
-  position: absolute;
-  top: 10px;
-  padding: 6px 12px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 0.9em;
-  border-radius: 4px;
-}
-
-.label.left {
-  left: 10px;
-}
-
-.label.right {
-  right: 10px;
-}
-</style>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const containers = document.querySelectorAll('.comparison-container');
-  containers.forEach(container => {
-    const slider = container.querySelector('.comparison-slider');
-    const beforeImg = container.querySelector('.before-img');
-
-    function moveSlider(e, touch = false) {
-      const rect = container.getBoundingClientRect();
-      const x = (touch ? e.touches[0].clientX : e.clientX) - rect.left;
-      const width = container.offsetWidth;
-      const percent = Math.max(0, Math.min(x / width, 1)) * 100;
-      beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-      slider.style.left = `${percent}%`;
-    }
-
-    container.addEventListener('mousemove', e => moveSlider(e));
-    container.addEventListener('touchmove', e => moveSlider(e, true));
-  });
-});
-</script>
-<section id="section-temoignages" style="padding:60px 20px; background:#0F0F0F;">
-
-<style>
-.carousel-container {
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-}
-.carousel-track {
+.vs-header-main {
   display: flex;
-  animation: scrollCarousel 20s linear infinite;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 30px;
 }
-.testimonial {
-  flex: 0 0 auto;
-  width: 300px;
-  margin: 0 20px;
-  padding: 20px;
-  background-color: #1E1E1E;
-  border: 1px solid #D4AF37;
-  border-radius: 10px;
+.vs-logo {
+  height: 55px;
+}
+.vs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+.vs-nav a {
   color: white;
-  text-align: center;
-  font-size: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.testimonial span {
-  display: block;
-  color: #D4AF37;
+  margin: 0 12px;
+  text-transform: uppercase;
   font-size: 0.9em;
-  margin-top: 10px;
-}
-@keyframes scrollCarousel {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
-<section id="section-formules" style="padding:60px 20px; background:#0F0F0F; color:white;">
-<h2 style="text-align:center; font-size:32px;">Nos Packs</h2><p style="color: #E5E5E5; text-align: center; margin-top: -20px; margin-bottom: 30px;">Choisissez l'offre qui correspond le mieux à votre besoin</p>
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;">
-<div style="background:#1A1A1A; padding:20px; border-radius:10px; width:250px; text-align:center;">
-<h3>1 pièce</h3>
-<p style="font-size:24px; color:#D4AF37;">49€</p>
-</div>
-<div style="background:#1A1A1A; padding:20px; border-radius:10px; width:250px; text-align:center;">
-<h3>3 pièces</h3>
-<p style="font-size:24px; color:#D4AF37;">119€</p>
-</div>
-<div style="background:#1A1A1A; padding:20px; border-radius:10px; width:250px; text-align:center;">
-<h3>Airbnb / Pro</h3>
-<p style="font-size:24px; color:#D4AF37;">199€</p>
-</div>
-<div style="background:#1A1A1A; padding:20px; border-radius:10px; width:250px; text-align:center;">
-<h3>Option révision</h3>
-<p style="font-size:24px; color:#D4AF37;">+19€</p>
-</div>
-</div>
-</section><section class="valeziostudio-steps-section" data-aos="fade-up" id="section-steps">
-
-<section id="section-temoignages" style="padding: 80px 20px; background-color: #0F0F0F;">
-  <h2 style="color: #D4AF37; text-align: center; margin-bottom: 40px;">+1 200 clients conquis. Voici leurs retours.</h2>
-  <div class="carousel-container" style="overflow: hidden; position: relative; max-width: 100%;">
-    <div class="testimonial-track" style="display: flex; gap: 20px; animation: scrollCarousel 40s linear infinite;">
-      <div class="testimonial-card" style="flex: 0 0 auto; width: 300px; padding: 20px; background-color: #1E1E1E; border: 1px solid #D4AF37; border-radius: 10px; color: white; text-align: center;">
-        Katym — Paris<br/><span style="display:block; color:#D4AF37; margin-top:10px;">“Incroyablement précis !”</span>
-      </div>
-      <div class="testimonial-card" style="flex: 0 0 auto; width: 300px; padding: 20px; background-color: #1E1E1E; border: 1px solid #D4AF37; border-radius: 10px; color: white; text-align: center;">
-        Sandyt — Genève<br/><span style="display:block; color:#D4AF37; margin-top:10px;">“Je recommande à 100%”</span>
-      </div>
-      <div class="testimonial-card" style="flex: 0 0 auto; width: 300px; padding: 20px; background-color: #1E1E1E; border: 1px solid #D4AF37; border-radius: 10px; color: white; text-align: center;">
-        Stéphaniep — Lyon<br/><span style="display:block; color:#D4AF37; margin-top:10px;">“Mon salon est méconnaissable !”</span>
-      </div>
-      <div class="testimonial-card" style="flex: 0 0 auto; width: 300px; padding: 20px; background-color: #1E1E1E; border: 1px solid #D4AF37; border-radius: 10px; color: white; text-align: center;">
-        Eliep — Marseille<br/><span style="display:block; color:#D4AF37; margin-top:10px;">“Merci pour votre œil magique !”</span>
-      </div>
-      <div class="testimonial-card" style="flex: 0 0 auto; width: 300px; padding: 20px; background-color: #1E1E1E; border: 1px solid #D4AF37; border-radius: 10px; color: white; text-align: center;">
-        Hervét — Bordeaux<br/><span style="display:block; color:#D4AF37; margin-top:10px;">“Une expérience fluide et élégante”</span>
-      </div>
-      <div class="testimonial-card" style="flex: 0 0 auto; width: 300px; padding: 20px; background-color: #1E1E1E; border: 1px solid #D4AF37; border-radius: 10px; color: white; text-align: center;">
-        René M — Bruxelles<br/><span style="display:block; color:#D4AF37; margin-top:10px;">“Très beau rendu, rapide et clair”</span>
-      </div>
-    </div>
-  </div>
-</section>
-<style>
-@keyframes scrollCarousel {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-</style>
-
-
-<h2>Comment fonctionne Valezio ?</h2>
-<ol class="steps-list">
-<li>📝 1. Remplissez notre formulaire sécurisé</li>
-<li>📷 2. Envoyez votre photo sur WhatsApp</li>
-<li>⏱️ 3. Recevez votre relooking premium en 45 minutes</li>
-</ol>
-</section>
-<section id="notre-vision" style="padding: 80px 20px; max-width: 900px; margin: auto; text-align: center;">
-<h2 style="color: #D4AF37; font-size: 2em; margin-bottom: 40px;">Et si tout changeait… en 45 minutes ?</h2>
-<blockquote style="font-style: italic; color: #E5E5E5; font-size: 1.1em; margin-bottom: 40px;">
-    “Votre intérieur peut transformer votre vie. Il suffit de le révéler.”
-  </blockquote>
-<p style="color: #FFFFFF; font-size: 1.05em; line-height: 1.8;">
-    On ne s’en rend pas toujours compte…<br/>
-    Mais notre intérieur influence tout : notre énergie, notre confiance, nos envies, nos revenus.
-  </p>
-<p style="color: #E5E5E5; line-height: 1.8; margin-top: 20px;">
-    Un espace mal pensé peut nous freiner.<br/>
-    Un décor dépassé peut ruiner une vente ou faire fuir les voyageurs.<br/>
-    Et parfois, on pense que pour changer, il faut des mois de travaux ou des milliers d’euros.
-  </p>
-<p style="color: #E5E5E5; line-height: 1.8; margin-top: 20px; font-weight: bold;">
-    C’est faux.
-  </p>
-<p style="color: #E5E5E5; line-height: 1.8; margin-top: 20px;">
-    Chez <strong>Valezio Studio</strong>, nous réinventons votre pièce à partir d’une simple photo.<br/>
-    En 45 minutes, vous recevez un relooking complet, ultra-réaliste, pensé pour <strong>changer votre vie</strong>.<br/>
-    Pas demain. Maintenant.
-  </p>
-<p style="color: #E5E5E5; line-height: 1.8; margin-top: 20px;">
-    Vous voulez :<br/>
-    – vous sentir <strong>mieux chez vous</strong> ?<br/>
-    – <strong>louer plus cher</strong> sur Airbnb ?<br/>
-    – <strong>vendre avec plus-value</strong> ?<br/>
-    – <strong>valoriser votre image professionnelle</strong> ?<br/>
-    – ou tout simplement <strong>aimer à nouveau votre intérieur</strong> ?
-  </p>
-<p style="color: #FFFFFF; font-size: 1.05em; font-weight: bold; margin-top: 30px;">
-    Vous êtes au bon endroit.
-  </p>
-<p style="color: #E5E5E5; line-height: 1.8; margin-top: 20px;">
-    Valezio Studio, c’est plus qu’un relooking.<br/>
-    C’est un déclencheur.<br/>
-    Un coup d’accélérateur.<br/>
-    Une réponse concrète à tous ceux qui veulent <strong>mieux vivre, mieux paraître, mieux réussir</strong>.
-  </p>
-<a href="formulaire-valezio-experience-luxe.html" style="display: inline-block; margin-top: 40px; padding: 15px 30px; background-color: #D4AF37; color: #0F0F0F; font-weight: bold; text-decoration: none; border-radius: 5px;">
-    Envoyer ma photo maintenant
-  </a>
-</section>
-<section data-aos="fade-up" id="section-faq">
-<h2 style="text-align: center; color: #D4AF37; font-size: 2em; margin-bottom: 40px;">Questions fréquentes</h2>
-<div class="faq-container" style="max-width: 800px; margin: auto;">
-<div class="faq-item">
-<button class="faq-question">Quels sont les délais de livraison ?</button><p id="loading-message" style="display:none; text-align:center; color:#D4AF37; font-weight:bold; margin-top:15px;">Envoi en cours...</p>
-<div class="faq-answer"><p>Votre relooking est livré sur WhatsApp en moins de 45 minutes après réception de votre photo.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-question">Est-ce vraiment personnalisé ?</button><p id="loading-message" style="display:none; text-align:center; color:#D4AF37; font-weight:bold; margin-top:15px;">Envoi en cours...</p>
-<div class="faq-answer"><p>Oui. Chaque relooking est imaginé en fonction de votre photo, de vos goûts et de vos objectifs. Rien n’est automatique ou générique.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-question">Puis-je demander une modification ?</button><p id="loading-message" style="display:none; text-align:center; color:#D4AF37; font-weight:bold; margin-top:15px;">Envoi en cours...</p>
-<div class="faq-answer"><p>Oui, une option de retouche est disponible à 19 € si vous souhaitez ajuster le rendu après réception.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-question">Est-ce adapté à un bien Airbnb ou professionnel ?</button><p id="loading-message" style="display:none; text-align:center; color:#D4AF37; font-weight:bold; margin-top:15px;">Envoi en cours...</p>
-<div class="faq-answer"><p>Absolument. Nous avons des packs dédiés pour les pros, les Airbnb et les espaces à fort enjeu d’image.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-question">Puis-je me faire rembourser ?</button><p id="loading-message" style="display:none; text-align:center; color:#D4AF37; font-weight:bold; margin-top:15px;">Envoi en cours...</p>
-<div class="faq-answer"><p>Non. Chaque création est unique, sur-mesure, et livrée rapidement. Aucun remboursement n’est possible, comme précisé dans nos CGV.</p></div>
-</div>
-</div>
-<script>
-document.querySelectorAll('.faq-question').forEach(button => {
-button.addEventListener('click', () => {
-const answer = button.nextElementSibling;
-answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
-});
-});
-</script>
-</section>
-<script>
-document.querySelectorAll('.faq-question').forEach(button => {
-button.addEventListener('click', () => {
-const answer = button.nextElementSibling;
-answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
-});
-});
-</script>
-<script>
-  document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
-      answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
-    });
-  });
-</script>
-<script>
-  document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
-      answer.style.display = (answer.style.display === 'none') ? 'block' : 'none';
-    });
-  });
-</script>
-<footer class="valeziostudio-footer" style="text-align: center; padding: 40px 20px; background-color: #0F0F0F;">
-<div style="text-align: center; margin-bottom: 20px;"><img alt="Valezio Studio Logo" src="logo-valezio.png" style="height: 70px;"/></div>
-<nav style="margin-bottom: 15px;">
-<a class="footer-link" href="06-cgv.html" style="color: #D4AF37; margin: 0 12px; text-decoration: none; font-size: 0.9em;" target="_self">CGV</a>
-<a class="footer-link" href="07-confidentialite.html" style="color: #D4AF37; margin: 0 12px; text-decoration: none; font-size: 0.9em;">Confidentialité</a>
-<a class="footer-link" href="08-mentions-legales.html" style="color: #D4AF37; margin: 0 12px; text-decoration: none; font-size: 0.9em;">Mentions légales</a>
-<a class="footer-link" href="https://wa.me/33600000000" style="color: #D4AF37; margin: 0 12px; text-decoration: none; font-size: 0.9em;" target="_blank">Contact</a></nav>
-<p style="color: #D4AF37; font-size: 0.85em;">© 2025 Valezio Studio – Tous droits réservés. Design élégant livré avec précision.</p>
-<div style="margin-top: 30px; font-size: 0.9em; color: #D4AF37; text-align: center;">Besoin d’aide pour choisir votre formule ? Parlez à Valezio en direct sur WhatsApp.</div></footer></section>
-<!-- Bouton Chatbase personnalisé Valezio -->
-<style>
-#valezio-chat-trigger {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #D4AF37;
-  color: #0F0F0F;
-  border: none;
-  border-radius: 50px;
-  padding: 14px 20px;
-  font-weight: bold;
-  font-size: 14px;
-  cursor: pointer;
-  z-index: 9999;
-  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-  animation: pulse 2s infinite;
+  font-weight: 400;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
+.vs-nav a:hover {
+  color: #D4AF37;
+}
+.vs-header-cta {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+.vs-button {
+  background-color: #D4AF37;
+  color: #0F0F0F;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  width: 90%;
+  max-width: 300px;
+}
+.vs-button:hover {
+  background-color: #B8902B;
+}
+
+
+.vs-header {
+  margin-bottom: 0;
+}
+.hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+.vs-header-main {
+  padding-bottom: 0 !important;
+}
+.hero {
+  margin-top: -20px !important;
+}
+.hero h1 {
+  margin-top: 0 !important;
+}
+
+
+.hero {
+  margin-top: -50px !important;
+}
+
+
+.hero {
+  margin-top: -90px !important;
+}
+
+
+.hero {
+  margin-top: -120px !important;
+}
+
+
+.hero {
+  margin-top: -220px !important;
+}
+
+
+.footer a {
+  color: white !important;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #D4AF37;
+  text-decoration: underline;
+}
+
+
+footer a,
+.footer a,
+.footer-column a {
+  color: white !important;
+  text-decoration: none !important;
+}
+footer a:hover,
+.footer a:hover,
+.footer-column a:hover {
+  color: #D4AF37 !important;
+  text-decoration: underline !important;
+}
+
+</style>
+<style>
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+  0% {  }
   70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
   100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 </style>
-<button id="valezio-chat-trigger">Parler à Valezio</button>
+<style>
+footer a:hover {
+  color: #B8902B !important;
+  text-decoration: underline !important;
+  transition: all 0.3s ease;
+}
+#valezio-chat-trigger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  transition: all 0.3s ease;
+}
+</style>
+</head>
+<body>
+<header>
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; background-color: #0F0F0F; padding: 15px 30px; border-bottom: 1px solid #2E2E2E;">
+<a href="index.html"><img alt="Valezio Logo" src="https://i.ibb.co/vXkF10D/logo-valezio-blanc.png" style="height:50px;"/></a>
+<nav class="desktop-menu" style="display: flex; flex-wrap: wrap; gap: 22px;">
+<a href="index.html">Accueil</a><a href="valezio-realisations.html">Nos Réalisations</a><a href="valezio-blog.html">Blog</a>
+<a href="valezio-avant-apres.html">Avant / Après</a>
+<a href="valezio-tarifs-experiences.html">Tarifs &amp; Expériences</a>
+<a href="valezio-formulaire-experience.html">Créez votre expérience</a>
+<a href="valezio-ame-de-valezio.html">L’âme de Valezio</a>
+<a href="valezio-questions-frequentes.html">Questions fréquentes</a>
+<a href="valezio-contact.html">Contactez notre équipe</a>
+<a class="vs-button" href="valezio-formulaire-experience.html" style="margin-left: 15px; align-self: center;">Recevoir mon relooking</a>
+</nav>
+<div class="burger" onclick="document.querySelector('.mobile-menu').classList.toggle('show');" style="font-size: 26px; color: white; display: none;">☰</div>
+</div>
+<div class="mobile-menu" style="display: none; flex-direction: column; background-color: #0F0F0F; padding: 20px; text-align: center;">
+<a href="index.html">Accueil</a>
+<a href="valezio-avant-apres.html">Avant / Après</a>
+<a href="valezio-tarifs-experiences.html">Tarifs &amp; Expériences</a>
+<a href="valezio-formulaire-experience.html">Créez votre expérience</a>
+<a href="valezio-ame-de-valezio.html">L’âme de Valezio</a>
+<a href="valezio-questions-frequentes.html">Questions fréquentes</a>
+<a href="valezio-contact.html">Contactez notre équipe</a>
+<a href="valezio-conditions-service.html">Conditions de service</a>
+<a href="valezio-donnees-confidentielles.html">Protection des données</a>
+<a href="valezio-informations-officielles.html">Informations officielles</a>
+</div>
+<style>
+    @media (max-width: 768px) {
+      .desktop-menu { display: none !important; }
+      .burger { display: block !important; }
+      .mobile-menu.show { display: flex !important; }
+      .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 0;
+      }
+      .mobile-menu a:hover {
+        color: #D4AF37;
+      }
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    nav a:hover {
+      color: #D4AF37;
+    }
+  </style>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Relookez votre intérieur en 45 minutes</h1>
+<a class="cta-button" href="#">Recevoir mon relooking</a>
+</div>
+</section>
+<!-- POURQUOI -->
+<section>
+<h2>Pourquoi Valezio ?</h2>
+<p>Nous sublimons votre intérieur sans travaux ni stress. Une simple photo suffit pour découvrir une toute nouvelle ambiance, sur mesure, en moins d'une heure.</p>
+</section>
+<!-- AVANT / APRÈS -->
+<section>
+<h2>Avant / Après</h2>
+<div class="carousel">
+<img src="https://via.placeholder.com/500x300?text=Avant+1"/>
+<img src="https://via.placeholder.com/500x300?text=Après+1"/>
+<img src="https://via.placeholder.com/500x300?text=Avant+2"/>
+<img src="https://via.placeholder.com/500x300?text=Après+2"/>
+</div>
+</section>
+<!-- ÉTAPES -->
+<section>
+<h2>Comment ça marche ?</h2>
+<div class="steps">
+<div>
+<img alt="" src="https://via.placeholder.com/100"/><p>Je prends une photo</p>
+</div>
+<div>
+<img alt="" src="https://via.placeholder.com/100"/><p>Je paie en ligne</p>
+</div>
+<div>
+<img alt="" src="https://via.placeholder.com/100"/><p>Je reçois mon relooking</p>
+</div>
+</div>
+</section>
+<!-- FORMULES -->
+<section>
+<h2>Nos Formules</h2>
+<div class="formules">
+<div class="formule-card">
+<h3>Mini</h3>
+<p>1 pièce, rendu simple</p>
+<a class="cta-button" href="#">Choisir</a>
+</div>
+<div class="formule-card">
+<h3>Multi-pièces</h3>
+<p>3 pièces, optimisation globale</p>
+<a class="cta-button" href="#">Choisir</a>
+</div>
+<div class="formule-card">
+<h3>Expérience Luxe</h3>
+<p>Ambiance haut de gamme personnalisée</p>
+<a class="cta-button" href="#">Choisir</a>
+</div>
+</div>
+</section>
+<!-- TÉMOIGNAGES -->
+<section>
+<h2>Ils nous recommandent</h2>
+<div class="testimonials">
+<div class="testimonial">★★★★★<br/>“J’ai adoré le résultat !”<br/>– Katym</div>
+<div class="testimonial">★★★★★<br/>“Rapide, beau et accessible”<br/>– Hervét</div>
+<div class="testimonial">★★★★★<br/>“Mon salon a changé de vie”<br/>– Joyceb</div>
+</div>
+</section>
+<!-- MARQUES -->
+<section>
+<h2>Ils nous ont fait confiance</h2>
+<div class="brands">
+<img src="https://via.placeholder.com/80x40?text=Airbnb"/>
+<img src="https://via.placeholder.com/80x40?text=Ikea"/>
+<img src="https://via.placeholder.com/80x40?text=Zara+Home"/>
+<img src="https://via.placeholder.com/80x40?text=Leroy+Merlin"/>
+</div>
+</section>
+<!-- MOTIVATIONNEL -->
+<section>
+<h2>Votre chez-vous mérite mieux</h2>
+<p>Pas besoin de déménager pour se sentir bien. Laissez-nous révéler le potentiel de votre intérieur.</p>
+<div style="text-align: center;"><a class="cta-button" href="#">Je commence maintenant</a></div>
+</section>
+<!-- FAQ -->
+<section>
+<h2>Questions fréquentes</h2>
+<div class="faq-item">Combien de temps pour recevoir mon relooking ? – En moins de 45 minutes.</div>
+<div class="faq-item">Dois-je télécharger une app ? – Non, tout se passe ici.</div>
+<div class="faq-item">Est-ce que je peux demander une modification ? – Oui, en option.</div>
+</section>
+</main>
+<style>
+  .footer-wrapper {
+    background-color: #0F0F0F;
+    padding: 60px 20px;
+    border-top: 1px solid #333;
+    font-family: 'Poppins', sans-serif;
+  }
+  .footer-wrapper hr {
+    border-color: #D4AF37;
+    width: 60px;
+    margin: 2px auto 20px;
+  }
+  .footer-wrapper .intro {
+    color: #D4AF37;
+    font-style: italic;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+  .footer-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer-col {
+    width: 100%;
+    max-width: 300px;
+  }
+  .footer-col h4 {
+    color: #D4AF37;
+    margin-bottom: 12px;
+  }
+  .footer-col a {
+    display: block;
+    margin-bottom: 6px;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-col a:hover {
+    color: #D4AF37;
+  }
+  .footer-col p {
+    color: white;
+    margin-bottom: 10px;
+  }
+  .cta-label {
+    font-size: 0.9em;
+    color: #D4AF37;
+    margin-bottom: 12px;
+  }
+  .footer-col button {
+    background-color: #D4AF37;
+    color: #0F0F0F;
+    border: none;
+    padding: 10px 20px; margin-top: 18px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 50px;
+    cursor: pointer;
+    max-width: 240px;
+    animation: pulse 2s infinite;
+  }
+  .footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+  }
+  .footer-bottom p {
+    margin: 4px 0;
+  }
+
+  @keyframes pulse {
+    0% {  }
+    70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer-columns {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      align-items: flex-start;
+    }
+    .footer-col {
+      max-width: none;
+      text-align: left;
+    }
+  }
+</style>
+<footer class="footer-wrapper">
+<hr/>
+<p class="intro">Votre pièce préférée n’existe pas encore.</p>
+<hr/>
+<div class="footer-columns">
+<div class="footer-col">
+<h4>Liens utiles</h4>
+<a href="#">Formules</a>
+<a href="#">FAQ</a>
+<a href="#">CGV</a>
+<a href="#">Confidentialité</a>
+<a href="#">Mentions légales</a>
+</div>
+<div class="footer-col">
+<h4>Réseaux sociaux</h4>
+<a href="https://instagram.com" target="_blank">Instagram</a>
+<a href="https://tiktok.com/@valezio" target="_blank">TikTok</a>
+<a href="https://facebook.com/valezio" target="_blank">Facebook</a>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<p style="color: white; margin-bottom: 16px;">contact@valezio.com</p>
+<div class="cta-label" style="margin-bottom: 4px;">Besoin d’un conseil ?</div>
+<button id="valezio-chat-trigger" style="background-color: #D4AF37; color: #0F0F0F; border: none; padding: 10px 20px; font-weight: bold; font-size: 13px; border-radius: 50px; cursor: pointer; width: 100%; margin-top: 18px;">Je vous aide à choisir votre formule</button><p style="color:#E5E5E5; font-size: 0.75em; margin-top: 16px; text-align: center;">100% en ligne – Service sécurisé – Disponible dans le monde entier</p></div>
+</div>
+<div class="footer-bottom">
+<p style="color:#D4AF37;"><strong>© 2025 Valezio Studio</strong> – Tous droits réservés.</p>
+<p style="color:#D4AF37;">Un relooking, une transformation, une émotion. Sans stress.</p>
+</div>
+</footer>
 <script>
-(function(){
-  if(!window.chatbase || window.chatbase("getState") !== "initialized"){
-    window.chatbase=(...args)=>{
-      if(!window.chatbase.q){window.chatbase.q=[]}
-      window.chatbase.q.push(args)
-    };
-    window.chatbase=new Proxy(window.chatbase,{
-      get(target, prop){
-        if(prop === "q"){return target.q}
-        return (...args)=>target(prop, ...args)
+  document.addEventListener("DOMContentLoaded", function() {
+    const trigger = document.getElementById("valezio-chat-trigger");
+    if (trigger) {
+      trigger.addEventListener("click", function() {
+        if (window.Chatbase) {
+          window.Chatbase.openChat();
+        } else {
+          console.warn("Chatbase non encore chargé.");
+        }
+      });
+    }
+  });
+</script>
+<style>
+@keyframes pulse {
+  0% {  }
+  70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+</style><script>
+document.addEventListener("DOMContentLoaded", function() {
+  const trigger = document.getElementById("valezio-chat-trigger");
+  if (trigger) {
+    trigger.addEventListener("click", function() {
+      if (window.Chatbase) {
+        window.Chatbase.openChat();
+      } else {
+        console.warn("Chatbase non encore chargé.");
       }
     });
   }
-
-  const onLoad = function(){
-    const script = document.createElement("script");
-    script.src = "https://www.chatbase.co/embed.min.js";
-    script.id = "6uE0dfClr-_KWTRZjWEVE";
-    script.domain = "www.chatbase.co";
-    document.body.appendChild(script);
-  };
-
-  if(document.readyState === "complete"){ onLoad(); }
-  else { window.addEventListener("load", onLoad); }
-})();
-document.addEventListener("DOMContentLoaded", function() {
-  const trigger = document.getElementById("valezio-chat-trigger");
-  trigger.addEventListener("click", function() {
-    if (window.Chatbase) {
-      window.Chatbase.openChat();
-    } else {
-      console.warn("Chatbase non encore chargé.");
-    }
-  });
 });
-</script>
-</body></html>
+</script></body>
+</html>
