@@ -504,7 +504,31 @@ footer a:hover {
   align-items: center;
   gap: 4px;
   padding: 10px;
+  margin-top: 6px;
+  margin-right: 10px;
   z-index: 1000;
+}
+</style>
+
+
+<style>
+/* Fade-in animation for topbar */
+@keyframes fadeInTopbar {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.vs-header-topbar {
+  animation: fadeInTopbar 0.8s ease-out forwards;
+}
+
+/* Enhanced hover effect on CTA button */
+.cta-button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #B8902B;
+  transform: scale(1.05);
 }
 </style>
 
