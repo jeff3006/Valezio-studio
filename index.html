@@ -1970,7 +1970,27 @@ section {
   flex-shrink: 0;
 }
 </style>
-</head>
+<style>
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style><style>
+@keyframes pulseGold {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+  50% { box-shadow: 0 0 25px 12px rgba(212, 175, 55, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+}
+.cta-button.gold-glow {
+  animation: pulseGold 2s infinite;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+</style></head>
 <body>
 <header class="vs-header">
 <div class="vs-header-topbar"><div class="marquee">Relookez sans stress. Sublimez sans travaux. Vivez Valezio.</div></div>
@@ -2189,121 +2209,94 @@ section {
 </style>
 <main>
 <!-- HERO -->
-<section class="hero" style="background-image: url('Hero.png');background-size: cover;background-position: center bottom;padding-top: 120px;padding-bottom: 40px;margin: 0 auto;">
+<section class="hero" style="background-image: url('salon-cuisine-haut-de-gamme.jpeg');background-size: cover;background-position: center bottom;padding-top: 120px;padding-bottom: 40px;margin: 0 auto;">
 <div style="text-align: center;">
 <h1 style="font-size: 2.5em; line-height: 1.3; color: white;">
-        Transformez<br/>votre intérieur<br/>en chef-d’œuvre visuel
+        Transformez votre intérieur.<br/>Sublimez votre quotidien.
       </h1>
-<p style="color: white; max-width: 600px; margin: 20px auto;">
-        Recevez un relooking haut de gamme en moins de 45 minutes, directement sur WhatsApp.
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">
+        Vous méritez un intérieur qui vous inspire, vous apaise, vous ressemble.<br/>Valezio Studio transforme vos pièces en véritables chefs-d’œuvre, sans travaux, en moins de 45 minutes, à partir d’une simple photo.
       </p>
-<a class="cta-button" href="valezio-formulaire-experience.html">Découvrir ma nouvelle pièce</a>
+<a class="cta-button" href="valezio-formulaire-experience.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(212,175,55,0.2)'" onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 18px rgba(212,175,55,0.5)'" style="display: inline-block; padding: 15px 32px; background: #D4AF37; color: #0F0F0F; font-weight: 600; border-radius: 40px; text-decoration: none; font-size: 1.05em; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease-in-out;">Découvrir ma nouvelle pièce</a>
 </div>
 </section>
 <!-- POURQUOI -->
 <section style="padding: 60px 20px; text-align: center;">
-<h2 style="color: #D4AF37;">Pourquoi Valezio ?</h2>
-<p style="color: white; max-width: 700px; margin: 20px auto; line-height: 1.7;">
-          Nous sublimons votre intérieur sans travaux ni stress.<br/>
-          Une simple photo suffit pour révéler une toute nouvelle ambiance, pensée pour vous, sur mesure, en moins d’une heure.
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">Pourquoi Valezio ?</h2>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">
+          On veut du beau. Mais entre les idées floues, le manque de temps, la peur de se tromper, et les travaux qu’on repousse…<br/>on finit par vivre dans un lieu qui ne nous fait plus vibrer.<br/>Chez Valezio Studio, on a décidé de rendre la transformation d’intérieur aussi simple qu’envoyer une photo.<br/>Vous nous montrez votre pièce. On vous montre ce qu’elle peut devenir.
         </p>
 </section>
 <!-- AVANT / APRÈS -->
 <section>
-<h2 style="color: #D4AF37; text-align: center;">Avant / Après</h2>
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">Avant / Après</h2>
 <div class="carousel-wrapper" style="overflow-x: auto;">
-<div class="carousel-track" style="display: flex; gap: 10px; width: max-content;">
-<img src="avant6.png"/>
-<img src="apres6.png"/>
-<img src="avant5.png"/>
-<img src="apres5.png"/>
-<img src="avant4.png"/>
-<img src="apres4.png"/>
-<img src="avant3.png"/>
-<img src="apres3.png"/>
-<img src="avant2.png"/>
-<img src="apres2.png"/>
-<img src="avant1.png"/>
-<img src="apres1.png"/>
-<!-- DUPLICATION -->
-<img src="avant6.png"/>
-<img src="apres6.png"/>
-<img src="avant5.png"/>
-<img src="apres5.png"/>
-<img src="avant4.png"/>
-<img src="apres4.png"/>
-<img src="avant3.png"/>
-<img src="apres3.png"/>
-<img src="avant2.png"/>
-<img src="apres2.png"/>
-<img src="avant1.png"/>
-<img src="apres1.png"/>
+<div class="carousel-track" style="display: flex; gap: 10px; width: max-content;"><img alt="Chambre d'enfants transformée avec lits superposés intégrés, rangements sur-mesure et éclairage indirect" src="avant-chambre-enfant-fonctionnelle.png"/><img alt="Chambre d'enfants transformée avec lits superposés intégrés, rangements sur-mesure et éclairage indirect" src="apres-chambre-enfant-sur-mesure-deco.png"/><img alt="Transformation d’une chambre double ado en espace moderne avec bois, textile bleu nuit et bureau sur-mesure" src="avant-chambre-double-classique.png"/><img alt="Transformation d’une chambre double ado en espace moderne avec bois, textile bleu nuit et bureau sur-mesure" src="apres-chambre-double-elegante.png"/><img alt="Chambre parentale métamorphosée en suite lumineuse et minimaliste, ambiance beige chic" src="avant-chambre-parentale-classique.png"/><img alt="Chambre parentale métamorphosée en suite lumineuse et minimaliste, ambiance beige chic" src="apres-chambre-parentale-haut-de-gamme.png"/><img alt="Avant après d'une entrée de maison avec ajout de décor, statue design et ambiance chaleureuse" src="avant-entree-maison.png"/><img alt="Avant après d'une entrée de maison avec ajout de décor, statue design et ambiance chaleureuse" src="apres-entree-decor-elegant.png"/><img alt="Transformation d’un WC simple en petit espace élégant avec lumière tamisée et finitions dorées" src="avant-wc-basique.png"/><img alt="Transformation d’un WC simple en petit espace élégant avec lumière tamisée et finitions dorées" src="apres-wc-deco-chaleureux.png"/><img alt="Salle de bain transformée avec mobilier bois clair, douche à l’italienne et décoration florale" src="avant-salle-de-bain-moderne-vide.png"/><img alt="Salle de bain transformée avec mobilier bois clair, douche à l’italienne et décoration florale" src="apres-salle-de-bain-decor-naturel.png"/><img alt="Avant après chambre bébé rose poudré avec décoration murale douce et fauteuil à bascule" src="avant-chambre-bebe-neutre.png"/><img alt="Avant après chambre bébé rose poudré avec décoration murale douce et fauteuil à bascule" src="apres-chambre-bebe-poetique.png"/><img alt="Chambre de jeune fille transformée en suite haut de gamme avec tons rosés et éclairage design" src="avant-chambre-simple-ordinaire.png"/><img alt="Chambre de jeune fille transformée en suite haut de gamme avec tons rosés et éclairage design" src="apres-chambre-suite-luxueuse.png"/><img alt="Salon vintage transformé en espace clair et rentable pour location Airbnb haut de gamme" src="avant-salon-vintage.png"/><img alt="Salon vintage transformé en espace clair et rentable pour location Airbnb haut de gamme" src="apres-salon-airbnb-lumineux.png"/></div>
 </div>
-</div>
-</section>
+<div style="text-align: center; margin-top: 30px;"><a class="cta-button gold-glow" href="valezio-formulaire-experience.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(212,175,55,0.2)'" onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 18px rgba(212,175,55,0.5)'" style="display: inline-block; padding: 15px 32px; background: #D4AF37; color: #0F0F0F; font-weight: 600; border-radius: 40px; text-decoration: none; font-size: 1.05em; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease-in-out;">Moi aussi je veux mon avant/après</a></div></section>
 <!-- ÉTAPES -->
 <section>
-<h2>Comment ça marche ?</h2>
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">3 étapes. 0 stress. 100 % WAOUH.</h2>
 <div style="max-width: 800px; margin: 0 auto; color: white; font-size: 1.1em; line-height: 1.6;">
-<p><strong>1. Validez votre commande</strong><br/>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;"><strong>1. Validez votre commande</strong><br/>
           📋 Choisissez votre offre de relooking personnalisée et procédez au paiement en moins de 2 minutes. Vous recevrez immédiatement un lien exclusif pour entrer en contact avec notre équipe via WhatsApp.</p>
-<p><strong>2. Envoyez votre photo et vos envies</strong><br/>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;"><strong>2. Envoyez votre photo et vos envies</strong><br/>
           📸 Photograpiez votre pièce sous un bel angle naturel — nul besoin d’équipement professionnel. Sur WhatsApp, nous vous poserons 4 questions rapides pour concevoir votre projet 100 % sur-mesure.</p>
-<p><strong>3. Recevez votre relooking sur-mesure</strong><br/>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;"><strong>3. Recevez votre relooking sur-mesure</strong><br/>
           ⏳ Recevez votre projet finalisé directement sur WhatsApp en moins d’une heure, sans déplacement, sans travaux, avec l’élégance CasaNova Studio.</p>
 </div>
 <div style="text-align: center; margin-top: 30px;">
 <img alt="Étapes Valezio" src="3step.png" style="max-width: 100%; height: auto; border-radius: 12px;"/>
 </div>
-</section>
+<div style="text-align: center; margin-top: 40px;"><a class="cta-button gold-glow" href="valezio-formulaire-experience.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(212,175,55,0.2)'" onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 18px rgba(212,175,55,0.5)'" style="display: inline-block; padding: 15px 32px; background: #D4AF37; color: #0F0F0F; font-weight: 600; border-radius: 40px; text-decoration: none; font-size: 1.05em; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease-in-out;">C’est parti, je commande mon relooking</a></div></section>
 <!-- FORMULES -->
 <section>
-<h2 style="color: #D4AF37; text-align: center;">Nos Formules</h2>
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">Choisissez le niveau de transformation qui vous correspond</h2>
 <div class="formules" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-top: 20px;">
-<div class="formule-card" style="background-color: #1a1a1a; padding: 30px; border-radius: 12px; width: 300px; text-align: center;">
+<div class="formule-card" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.02)'" style="background-color: #1a1a1a; padding: 30px; border-radius: 20px; width: 300px; text-align: center; box-shadow: 0 0 12px rgba(255,255,255,0.05); transition: all 0.3s ease;">
 <h3 style="color: #D4AF37; font-size: 1.3em;">Formule Éveil</h3>
-<p style="color: white;">Pour ceux qui veulent débloquer une idée déco.<br/>1 pièce, suggestion rapide.<br/><strong>49 €</strong></p>
-<a class="cta-button" href="valezio-formulaire-experience.html">Choisir</a>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">Pour ceux qui veulent débloquer une idée déco.<br/>1 pièce, suggestion rapide.<br/><strong>49 €</strong></p>
+<a class="cta-button" href="valezio-formulaire-experience.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(212,175,55,0.2)'" onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 18px rgba(212,175,55,0.5)'" style="display: inline-block; padding: 15px 32px; background: #D4AF37; color: #0F0F0F; font-weight: 600; border-radius: 40px; text-decoration: none; font-size: 1.05em; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease-in-out;">Choisir</a>
 </div>
-<div class="formule-card" style="background-color: #1a1a1a; padding: 30px; border-radius: 12px; width: 300px; text-align: center;">
+<div class="formule-card" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.02)'" style="background-color: #1a1a1a; padding: 30px; border-radius: 20px; width: 300px; text-align: center; box-shadow: 0 0 12px rgba(255,255,255,0.05); transition: all 0.3s ease;">
 <h3 style="color: #D4AF37; font-size: 1.3em;">Formule Impact</h3>
-<p style="color: white;">Parfait pour Airbnb ou vente rapide.<br/>Jusqu'à 3 pièces cohérentes.<br/><strong>89 €</strong></p>
-<a class="cta-button" href="valezio-formulaire-experience.html">Choisir</a>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">Parfait pour Airbnb ou vente rapide.<br/>Jusqu'à 3 pièces cohérentes.<br/><strong>89 €</strong></p>
+<a class="cta-button" href="valezio-formulaire-experience.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(212,175,55,0.2)'" onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 18px rgba(212,175,55,0.5)'" style="display: inline-block; padding: 15px 32px; background: #D4AF37; color: #0F0F0F; font-weight: 600; border-radius: 40px; text-decoration: none; font-size: 1.05em; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease-in-out;">Choisir</a>
 </div>
-<div class="formule-card" style="background-color: #1a1a1a; padding: 30px; border-radius: 12px; width: 300px; text-align: center;">
+<div class="formule-card" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.02)'" style="background-color: #1a1a1a; padding: 30px; border-radius: 20px; width: 300px; text-align: center; box-shadow: 0 0 12px rgba(255,255,255,0.05); transition: all 0.3s ease;">
 <h3 style="color: #D4AF37; font-size: 1.3em;">Formule Signature</h3>
-<p style="color: white;">Transformation complète haut de gamme.<br/>Style, ambiance, détails.<br/><strong>129 €</strong></p>
-<a class="cta-button" href="valezio-formulaire-experience.html">Choisir</a>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">Transformation complète haut de gamme.<br/>Style, ambiance, détails.<br/><strong>129 €</strong></p>
+<a class="cta-button" href="valezio-formulaire-experience.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(212,175,55,0.2)'" onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 18px rgba(212,175,55,0.5)'" style="display: inline-block; padding: 15px 32px; background: #D4AF37; color: #0F0F0F; font-weight: 600; border-radius: 40px; text-decoration: none; font-size: 1.05em; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease-in-out;">Choisir</a>
 </div>
 </div>
 </section>
 <section>
-<h2 style="color: #D4AF37; text-align: center;">Témoignages clients</h2>
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">Témoignages clients</h2>
 <div style="max-width: 100vw; overflow-x: auto;"><div class="testimonials-carousel" style="display: flex; overflow-x: auto; gap: 20px; padding: 20px; scroll-snap-type: x mandatory;">
-<div class="testimonial" style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 280px; max-width: 300px; scroll-snap-align: center;">
+<div class="testimonial" style="background-color: #1a1a1a; padding: 24px; border-radius: 18px; min-width: 280px; max-width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
 <img alt="Katym" src="https://via.placeholder.com/60" style="border-radius: 50%; margin-bottom: 10px;"/>
-<p style="color: #D4AF37;">★★★★★</p>
-<p style="color: white;">“J’ai pleuré en voyant le rendu. C’était exactement ce que je voulais.”</p>
-<p style="color: #999; font-size: 0.9em;">– Katym</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">★★★★★</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">“J’ai pleuré en voyant le rendu. C’était exactement ce que je voulais.”</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">– Katym</p>
 </div>
-<div class="testimonial" style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 280px; max-width: 300px; scroll-snap-align: center;">
+<div class="testimonial" style="background-color: #1a1a1a; padding: 24px; border-radius: 18px; min-width: 280px; max-width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
 <img alt="Hervét" src="https://via.placeholder.com/60" style="border-radius: 50%; margin-bottom: 10px;"/>
-<p style="color: #D4AF37;">★★★★★</p>
-<p style="color: white;">“Mon appartement s’est loué 2x plus vite après le relooking.”</p>
-<p style="color: #999; font-size: 0.9em;">– Hervét</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">★★★★★</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">“Mon appartement s’est loué 2x plus vite après le relooking.”</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">– Hervét</p>
 </div>
-<div class="testimonial" style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 280px; max-width: 300px; scroll-snap-align: center;">
+<div class="testimonial" style="background-color: #1a1a1a; padding: 24px; border-radius: 18px; min-width: 280px; max-width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
 <img alt="Joyceb" src="https://via.placeholder.com/60" style="border-radius: 50%; margin-bottom: 10px;"/>
-<p style="color: #D4AF37;">★★★★★</p>
-<p style="color: white;">“Je voulais déménager, maintenant je veux redécorer tout avec Valezio.”</p>
-<p style="color: #999; font-size: 0.9em;">– Joyceb</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">★★★★★</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">“Je voulais déménager, maintenant je veux redécorer tout avec Valezio.”</p>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">– Joyceb</p>
 </div>
 </div></div>
 </section>
 <!-- TÉMOIGNAGES -->
 <!-- MARQUES -->
 <section>
-<h2>Ils nous ont fait confiance</h2>
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">Ils nous ont fait confiance</h2>
 <div class="brands">
 <img src="https://via.placeholder.com/80x40?text=Airbnb"/>
 <img src="https://via.placeholder.com/80x40?text=Ikea"/>
@@ -2313,13 +2306,13 @@ section {
 </section>
 <!-- MOTIVATIONNEL -->
 <section>
-<h2>Votre chez-vous mérite mieux</h2>
-<p>Pas besoin de déménager pour se sentir bien. Laissez-nous révéler le potentiel de votre intérieur.</p>
-<div style="text-align: center;"><a class="cta-button" href="#">Je commence maintenant</a></div>
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">Votre chez-vous mérite mieux</h2>
+<p style="color: #E5E5E5; font-size: 1.05em; line-height: 1.6; max-width: 720px; margin: 10px auto 30px auto; text-align: center; animation: fadeInUp 1s ease-in-out;">Et si c’était le bon moment pour retomber amoureux de votre intérieur ?<br/>Pas besoin de déménager. Il suffit d’oser l’élégance.</p>
+<div style="text-align: center;"><a class="cta-button" href="valezio-formulaire-experience.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 5px 20px rgba(212,175,55,0.2)'" onmouseover="this.style.transform='scale(1.07)'; this.style.boxShadow='0 0 18px rgba(212,175,55,0.5)'" style="display: inline-block; padding: 15px 32px; background: #D4AF37; color: #0F0F0F; font-weight: 600; border-radius: 40px; text-decoration: none; font-size: 1.05em; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2); transition: all 0.3s ease-in-out;">Je commence maintenant</a></div>
 </section>
 <!-- FAQ -->
 <section>
-<h2>Questions fréquentes</h2>
+<h2 style="color: #D4AF37; text-align: center; font-size: 2em; margin-bottom: 20px; animation: fadeInUp 0.8s ease-in-out;">Questions fréquentes</h2>
 <div class="faq-item">Combien de temps pour recevoir mon relooking ? – En moins de 45 minutes.</div>
 <div class="faq-item">Dois-je télécharger une app ? – Non, tout se passe ici.</div>
 <div class="faq-item">Est-ce que je peux demander une modification ? – Oui, en option.</div>
@@ -2736,8 +2729,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <div class="mobile-menu-overlay" id="menuOverlay"></div>
-
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const carousel = document.querySelector('.carousel-wrapper');
