@@ -8,6 +8,7 @@
 <title>Valezio Studio – Page d’accueil complète</title>
 <style>
     html, body {
+  overflow-x: hidden;
       height: 100%;
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -15,7 +16,7 @@
       color: #FFFFFF;
     }
     body {
-      display: flex;
+  overflow-x: hidden;
       flex-direction: column;
     }
     main {
@@ -35,14 +36,9 @@
     section {
       padding: 40px 20px;
     }
-    .hero {
       background-image: url('https://via.placeholder.com/1600x800?text=Votre+nouveau+salon');
       background-size: cover;
-      background-position: center;
       height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
     
   height: 90vh;
@@ -57,7 +53,6 @@
 }
     .cta-button {
       display: inline-block;
-      margin-top: 20px;
       padding: 15px 25px;
       background: #D4AF37;
       color: #0F0F0F;
@@ -66,8 +61,6 @@
       text-decoration: none;
     }
     .carousel {
-      display: flex;
-      overflow-x: auto;
       gap: 5px;
       scroll-snap-type: x mandatory;
       padding: 20px 10px;
@@ -78,9 +71,7 @@
       scroll-snap-align: center;
     }
     .steps {
-      display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 5px;
       text-align: center;
     }
@@ -89,9 +80,7 @@
       max-width: 250px;
     }
     .formules {
-      display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 5px;
     }
     .formule-card {
@@ -100,17 +89,13 @@
       border-radius: 8px;
       width: 260px;
       text-align: center;
-      border: 1px solid #333;
     }
     .formule-card h3 {
       color: #D4AF37;
     }
     .formule-card .cta-button {
-      margin-top: 15px;
     }
     .testimonials {
-      display: flex;
-      overflow-x: auto;
       gap: 5px;
       padding: 20px;
     }
@@ -122,8 +107,6 @@
       max-width: 300px;
     }
     .brands {
-      display: flex;
-      justify-content: center;
       gap: 5px;
       flex-wrap: wrap;
     }
@@ -140,7 +123,6 @@
     footer {
       background-color: #0F0F0F;
       padding: 30px 20px;
-      border-top: 1px solid #333;
       color: #D4AF37;
       text-align: center;
       font-size: 0.95em;
@@ -160,9 +142,6 @@
   letter-spacing: 0.5px;
 }
 .vs-header-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   padding: 15px 30px;
 }
@@ -170,9 +149,7 @@
   height: 55px;
 }
 .vs-nav {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: 10px 0;
 }
 .vs-nav a {
@@ -188,7 +165,6 @@
   color: #D4AF37;
 }
 .vs-header-cta {
-  margin-top: 6px;
   text-align: center;
   width: 100%;
 }
@@ -212,9 +188,6 @@
 .vs-header {
   margin-bottom: 0;
 }
-.hero {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
 
   height: 90vh;
 }
@@ -223,41 +196,30 @@
 .vs-header-main {
   padding-bottom: 0 !important;
 }
-.hero {
-  margin-top: -20px !important;
 
   height: 90vh;
 }
 .hero h1 {
-  margin-top: 0 !important;
 
   margin-bottom: 30px;
 }
 
 
-.hero {
-  margin-top: -50px !important;
 
   height: 90vh;
 }
 
 
-.hero {
-  margin-top: -90px !important;
 
   height: 90vh;
 }
 
 
-.hero {
-  margin-top: -120px !important;
 
   height: 90vh;
 }
 
 
-.hero {
-  margin-top: -220px !important;
 
   height: 90vh;
 }
@@ -287,17 +249,13 @@ footer a:hover,
 }
 
 
-@keyframes scrollCarousel {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 .carousel {
-  display: flex;
   width: max-content;
-  animation: scrollCarousel 30s linear infinite;
 }
 .carousel-wrapper {
-  overflow: hidden;
   width: 100%;
 }
 .carousel img {
@@ -309,11 +267,8 @@ footer a:hover,
 
 
 @media (min-width: 768px) {
-  .hero {
     height: 80vh;
     background-size: cover;
-    background-position: center;
-    padding-top: 40px;
   }
   .hero h1 {
     font-size: 3.5em;
@@ -324,19 +279,228 @@ footer a:hover,
 }
 
 @media (min-width: 1024px) {
-  .hero {
     height: 85vh;
   }
   .hero h1 {
     font-size: 4em;
   }
-}</style>
+}
+
+  display: block;
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+  display: block;
+  background-size: cover;
+  padding-bottom: 140px;
+  text-align: center;
+  min-height: 600px;
+}
+.hero h1 {
+  font-size: 2.4em;
+  line-height: 1.2;
+  max-width: 90%;
+  margin: 0 auto 20px;
+  white-space: normal;
+  overflow: visible;
+}
+        
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
-@keyframes pulse {
   0% {  }
   70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
   100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 footer a:hover {
   color: #B8902B !important;
@@ -349,7 +513,93 @@ footer a:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
   transition: all 0.3s ease;
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 .footer-col h4::before {
   content: "";
@@ -359,7 +609,93 @@ footer a:hover {
   background-color: #D4AF37;
   opacity: 0.6;
   margin: 0 auto 4px auto;
-}</style><link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;display=swap" rel="stylesheet"/>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style><link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;display=swap" rel="stylesheet"/>
 <style>
 /* Étape 1 : Style premium du menu mobile */
 .mobile-menu-panel {
@@ -413,9 +749,94 @@ footer a:hover {
 
 .close-button:hover {
   transform: rotate(90deg);
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
-/* Étape 2 : animation du burger en croix */
 .burger-icon.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -428,7 +849,93 @@ footer a:hover {
 
 .burger-icon span {
   transition: all 0.4s ease;
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 /* Étape 3 : amélioration du contenu du menu mobile */
 .mobile-menu-panel a {
@@ -452,7 +959,93 @@ footer a:hover {
   margin-bottom: 20px;
   font-weight: 700;
   letter-spacing: 1px;
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 .mobile-menu-panel a {
   display: flex;
@@ -466,9 +1059,94 @@ footer a:hover {
   width: 24px;
   display: inline-block;
   text-align: center;
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
-@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -481,18 +1159,94 @@ footer a:hover {
 
 .mobile-menu-panel.show a {
   opacity: 0;
-  animation: fadeInUp 0.6s ease forwards;
 }
 
-.mobile-menu-panel.show a:nth-of-type(1) { animation-delay: 0.1s; }
-.mobile-menu-panel.show a:nth-of-type(2) { animation-delay: 0.2s; }
-.mobile-menu-panel.show a:nth-of-type(3) { animation-delay: 0.3s; }
-.mobile-menu-panel.show a:nth-of-type(4) { animation-delay: 0.4s; }
-.mobile-menu-panel.show a:nth-of-type(5) { animation-delay: 0.5s; }
-.mobile-menu-panel.show a:nth-of-type(6) { animation-delay: 0.6s; }
-.mobile-menu-panel.show a:nth-of-type(7) { animation-delay: 0.7s; }
-.mobile-menu-panel.show a:nth-of-type(8) { animation-delay: 0.8s; }
-.mobile-menu-panel.show a:nth-of-type(9) { animation-delay: 0.9s; }</style>
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 /* Overlay visuel pour effet de focus */
 .mobile-menu-overlay {
@@ -512,7 +1266,93 @@ footer a:hover {
 .mobile-menu-overlay.show {
   opacity: 1;
   pointer-events: auto;
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 .burger-icon {
   display: flex !important;
@@ -524,16 +1364,99 @@ footer a:hover {
   margin-top: 6px;
   margin-right: 10px;
   z-index: 1000;
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
-/* Fade-in animation for topbar */
-@keyframes fadeInTopbar {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .vs-header-topbar {
-  animation: fadeInTopbar 0.8s ease-out forwards;
 }
 
 /* Enhanced hover effect on CTA button */
@@ -543,15 +1466,185 @@ footer a:hover {
 .cta-button:hover {
   background-color: #B8902B;
   transform: scale(1.05);
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 @media (max-width: 768px) {
   .vs-header-main {
-    padding-top: 12px !important;
   }
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
-@keyframes fadeInLogo {
   from {
     opacity: 0;
     transform: scale(0.96);
@@ -563,13 +1656,97 @@ footer a:hover {
 }
 
 .vs-logo {
-  animation: fadeInLogo 0.8s ease-out forwards;
   opacity: 0;
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 .vs-header-topbar {
   overflow: hidden;
-  position: relative;
   height: 28px;
   background-color: #D4AF37;
   color: #0F0F0F;
@@ -582,17 +1759,101 @@ footer a:hover {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: marqueeLeft 20s linear infinite;
 }
 
-@keyframes marqueeLeft {
   from {
     transform: translateX(0%);
   }
   to {
     transform: translateX(-100%);
   }
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <style>
 /* WAOUH EFFECT 1 — Explosion maîtrisée */
 .mobile-menu-panel {
@@ -611,20 +1872,9 @@ footer a:hover {
 .mobile-menu-panel a {
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeInUpLink 0.6s ease forwards;
 }
 
-.mobile-menu-panel.show a:nth-of-type(1) { animation-delay: 0.1s; }
-.mobile-menu-panel.show a:nth-of-type(2) { animation-delay: 0.2s; }
-.mobile-menu-panel.show a:nth-of-type(3) { animation-delay: 0.3s; }
-.mobile-menu-panel.show a:nth-of-type(4) { animation-delay: 0.4s; }
-.mobile-menu-panel.show a:nth-of-type(5) { animation-delay: 0.5s; }
-.mobile-menu-panel.show a:nth-of-type(6) { animation-delay: 0.6s; }
-.mobile-menu-panel.show a:nth-of-type(7) { animation-delay: 0.7s; }
-.mobile-menu-panel.show a:nth-of-type(8) { animation-delay: 0.8s; }
-.mobile-menu-panel.show a:nth-of-type(9) { animation-delay: 0.9s; }
 
-@keyframes fadeInUpLink {
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -633,7 +1883,93 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 </head>
 <body>
 <header class="vs-header">
@@ -727,11 +2063,9 @@ footer a:hover {
 .burger-label {
   font-size: 10px;
   color: #D4AF37;
-  margin-top: 4px;
   letter-spacing: 1px;
 }
 .mobile-menu-panel {
-  top: 0;
   right: -100%;
   width: 80%;
   max-width: 320px;
@@ -758,8 +2092,6 @@ footer a:hover {
   color: #D4AF37;
 }
 .close-button {
-  position: absolute;
-  top: 20px;
   right: 20px;
   font-size: 28px;
   color: #D4AF37;
@@ -768,27 +2100,146 @@ footer a:hover {
 @media (max-width: 768px) {
   .vs-nav { display: none; }
   .burger-icon { display: flex; }
-}</style>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <main>
 <!-- HERO -->
-<section class="hero" style="background-image: url('Hero.png');background-size: cover;background-position: center bottom;padding-top: 200px;padding-bottom: 130px;margin: 0 auto;">
-<div>
-<h1>Transformez votre intérieur en chef-d’œuvre visuel</h1>
-<p style="color: #FFFFFF; max-width: 600px; margin: 0 auto 20px;">
+<section class="hero" style="background-image: url('Hero.png');background-size: cover;background-position: center bottom;padding-top: 120px;padding-bottom: 40px;margin: 0 auto;">
+<div style="text-align: center;">
+<h1 style="font-size: 2.5em; line-height: 1.3; color: white;">
+        Transformez<br/>votre intérieur<br/>en chef-d’œuvre visuel
+      </h1>
+<p style="color: white; max-width: 600px; margin: 20px auto;">
         Recevez un relooking haut de gamme en moins de 45 minutes, directement sur WhatsApp.
       </p>
 <a class="cta-button" href="valezio-formulaire-experience.html">Découvrir ma nouvelle pièce</a>
 </div>
 </section>
 <!-- POURQUOI -->
-<section>
-<h2>Pourquoi Valezio ?</h2>
-<p>Nous sublimons votre intérieur sans travaux ni stress. Une simple photo suffit pour découvrir une toute nouvelle ambiance, sur mesure, en moins d'une heure.</p>
+<section style="padding: 60px 20px; text-align: center;">
+<h2 style="color: #D4AF37;">Pourquoi Valezio ?</h2>
+<p style="color: white; max-width: 700px; margin: 20px auto; line-height: 1.7;">
+          Nous sublimons votre intérieur sans travaux ni stress.<br/>
+          Une simple photo suffit pour révéler une toute nouvelle ambiance, pensée pour vous, sur mesure, en moins d’une heure.
+        </p>
 </section>
 <!-- AVANT / APRÈS -->
 <section>
-<h2>Avant / Après</h2>
-<div class="carousel-wrapper"><div class="carousel"><img src="apres1.png"/><img src="avant1.png"/><img src="apres2.png"/><img src="avant2.png"/><img src="apres3.png"/><img src="avant3.png"/><img src="apres4.png"/><img src="avant4.png"/><img src="apres5.png"/><img src="avant5.png"/><img src="apres6.png"/><img src="avant6.png"/></div></div>
+<h2 style="color: #D4AF37; text-align: center;">Avant / Après</h2>
+<div class="carousel-wrapper" style="overflow-x: auto;">
+<div class="carousel-track" style="display: flex; gap: 10px; width: max-content;">
+<img src="avant6.png"/>
+<img src="apres6.png"/>
+<img src="avant5.png"/>
+<img src="apres5.png"/>
+<img src="avant4.png"/>
+<img src="apres4.png"/>
+<img src="avant3.png"/>
+<img src="apres3.png"/>
+<img src="avant2.png"/>
+<img src="apres2.png"/>
+<img src="avant1.png"/>
+<img src="apres1.png"/>
+<!-- DUPLICATION -->
+<img src="avant6.png"/>
+<img src="apres6.png"/>
+<img src="avant5.png"/>
+<img src="apres5.png"/>
+<img src="avant4.png"/>
+<img src="apres4.png"/>
+<img src="avant3.png"/>
+<img src="apres3.png"/>
+<img src="avant2.png"/>
+<img src="apres2.png"/>
+<img src="avant1.png"/>
+<img src="apres1.png"/>
+</div>
+</div>
 </section>
 <!-- ÉTAPES -->
 <section>
@@ -807,34 +2258,49 @@ footer a:hover {
 </section>
 <!-- FORMULES -->
 <section>
-<h2>Nos Formules</h2>
-<div class="formules">
-<div class="formule-card">
-<h3>Mini</h3>
-<p>1 pièce, rendu simple</p>
-<a class="cta-button" href="#">Choisir</a>
+<h2 style="color: #D4AF37; text-align: center;">Nos Formules</h2>
+<div class="formules" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-top: 20px;">
+<div class="formule-card" style="background-color: #1a1a1a; padding: 30px; border-radius: 12px; width: 300px; text-align: center;">
+<h3 style="color: #D4AF37; font-size: 1.3em;">Formule Éveil</h3>
+<p style="color: white;">Pour ceux qui veulent débloquer une idée déco.<br/>1 pièce, suggestion rapide.<br/><strong>49 €</strong></p>
+<a class="cta-button" href="valezio-formulaire-experience.html">Choisir</a>
 </div>
-<div class="formule-card">
-<h3>Multi-pièces</h3>
-<p>3 pièces, optimisation globale</p>
-<a class="cta-button" href="#">Choisir</a>
+<div class="formule-card" style="background-color: #1a1a1a; padding: 30px; border-radius: 12px; width: 300px; text-align: center;">
+<h3 style="color: #D4AF37; font-size: 1.3em;">Formule Impact</h3>
+<p style="color: white;">Parfait pour Airbnb ou vente rapide.<br/>Jusqu'à 3 pièces cohérentes.<br/><strong>89 €</strong></p>
+<a class="cta-button" href="valezio-formulaire-experience.html">Choisir</a>
 </div>
-<div class="formule-card">
-<h3>Expérience Luxe</h3>
-<p>Ambiance haut de gamme personnalisée</p>
-<a class="cta-button" href="#">Choisir</a>
+<div class="formule-card" style="background-color: #1a1a1a; padding: 30px; border-radius: 12px; width: 300px; text-align: center;">
+<h3 style="color: #D4AF37; font-size: 1.3em;">Formule Signature</h3>
+<p style="color: white;">Transformation complète haut de gamme.<br/>Style, ambiance, détails.<br/><strong>129 €</strong></p>
+<a class="cta-button" href="valezio-formulaire-experience.html">Choisir</a>
 </div>
 </div>
+</section>
+<section>
+<h2 style="color: #D4AF37; text-align: center;">Témoignages clients</h2>
+<div style="max-width: 100vw; overflow-x: auto;"><div class="testimonials-carousel" style="display: flex; overflow-x: auto; gap: 20px; padding: 20px; scroll-snap-type: x mandatory;">
+<div class="testimonial" style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 280px; max-width: 300px; scroll-snap-align: center;">
+<img alt="Katym" src="https://via.placeholder.com/60" style="border-radius: 50%; margin-bottom: 10px;"/>
+<p style="color: #D4AF37;">★★★★★</p>
+<p style="color: white;">“J’ai pleuré en voyant le rendu. C’était exactement ce que je voulais.”</p>
+<p style="color: #999; font-size: 0.9em;">– Katym</p>
+</div>
+<div class="testimonial" style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 280px; max-width: 300px; scroll-snap-align: center;">
+<img alt="Hervét" src="https://via.placeholder.com/60" style="border-radius: 50%; margin-bottom: 10px;"/>
+<p style="color: #D4AF37;">★★★★★</p>
+<p style="color: white;">“Mon appartement s’est loué 2x plus vite après le relooking.”</p>
+<p style="color: #999; font-size: 0.9em;">– Hervét</p>
+</div>
+<div class="testimonial" style="background-color: #1a1a1a; padding: 20px; border-radius: 12px; min-width: 280px; max-width: 300px; scroll-snap-align: center;">
+<img alt="Joyceb" src="https://via.placeholder.com/60" style="border-radius: 50%; margin-bottom: 10px;"/>
+<p style="color: #D4AF37;">★★★★★</p>
+<p style="color: white;">“Je voulais déménager, maintenant je veux redécorer tout avec Valezio.”</p>
+<p style="color: #999; font-size: 0.9em;">– Joyceb</p>
+</div>
+</div></div>
 </section>
 <!-- TÉMOIGNAGES -->
-<section>
-<h2>Ils nous recommandent</h2>
-<div class="testimonials">
-<div class="testimonial">★★★★★<br/>“J’ai adoré le résultat !”<br/>– Katym</div>
-<div class="testimonial">★★★★★<br/>“Rapide, beau et accessible”<br/>– Hervét</div>
-<div class="testimonial">★★★★★<br/>“Mon salon a changé de vie”<br/>– Joyceb</div>
-</div>
-</section>
 <!-- MARQUES -->
 <section>
 <h2>Ils nous ont fait confiance</h2>
@@ -916,14 +2382,12 @@ footer a:hover {
   .footer-col button {
     background-color: #D4AF37;
     color: #0F0F0F;
-    border: none;
     padding: 8px 16px; margin-top: 6px;
     font-weight: bold;
     font-size: 12px;
     border-radius: 18px;
     cursor: pointer;
     max-width: 240px;
-    animation: pulse 2s infinite;
   }
   .footer-bottom {
     margin-top: 30px;
@@ -935,7 +2399,6 @@ footer a:hover {
     margin: 4px 0;
   }
 
-  @keyframes pulse {
     0% {  }
     70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
     100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
@@ -952,7 +2415,93 @@ footer a:hover {
       max-width: none;
       text-align: left;
     }
-  }</style>
+  }
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style>
 <footer class="footer-wrapper">
 <p class="intro">Votre pièce préférée n’existe pas encore.</p>
 <div class="footer-columns">
@@ -992,11 +2541,96 @@ footer a:hover {
   });
 </script>
 <style>
-@keyframes pulse {
   0% {  }
   70% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
   100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-}</style><script>
+}
+
+/* DEBUG VISUEL */
+}
+section {
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.carousel-track:hover {
+  cursor: grab;
+}
+
+
+.carousel-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  touch-action: pan-x;
+}
+.carousel-track img {
+  height: 250px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+</style><script>
 document.addEventListener("DOMContentLoaded", function() {
   const trigger = document.getElementById("valezio-chat-trigger");
   if (trigger) {
@@ -1102,5 +2736,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <div class="mobile-menu-overlay" id="menuOverlay"></div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('.carousel-wrapper');
+  let isUserInteracting = false;
+  let scrollSpeed = 0.5;
+
+  function autoScroll() {
+    if (!isUserInteracting && carousel) {
+      carousel.scrollLeft += scrollSpeed;
+      if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+        carousel.scrollLeft = 0;
+      }
+    }
+    requestAnimationFrame(autoScroll);
+  }
+
+  carousel.addEventListener('touchstart', () => isUserInteracting = true);
+  carousel.addEventListener('touchend', () => isUserInteracting = false);
+  carousel.addEventListener('mouseenter', () => isUserInteracting = true);
+  carousel.addEventListener('mouseleave', () => isUserInteracting = false);
+
+  setTimeout(() => {
+    autoScroll();
+  }, 100); // lancement différé fiable
+});
+</script>
 </body>
 </html>
