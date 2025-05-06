@@ -286,6 +286,26 @@ footer a:hover,
   text-decoration: underline !important;
 }
 
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.carousel {
+  display: flex;
+  width: max-content;
+  animation: scrollCarousel 30s linear infinite;
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.carousel img {
+  height: 250px;
+  border-radius: 8px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
 </style>
 <style>
 @keyframes pulse {
@@ -745,7 +765,7 @@ footer a:hover {
 </style>
 <main>
 <!-- HERO -->
-<section class="hero" style="background-image: url('h1.PNG'); background-size: cover; background-position: center;">
+<section class="hero" style="background-image: url('h1.PNG'); background-size: cover; background-position: center; margin-top: 0;">
 <div>
 <h1>Transformez votre intérieur en chef-d’œuvre visuel</h1>
 <p style="color: #FFFFFF; max-width: 600px; margin: 0 auto 20px;">
@@ -762,7 +782,7 @@ footer a:hover {
 <!-- AVANT / APRÈS -->
 <section>
 <h2>Avant / Après</h2>
-<div class="carousel"><img src="avant1.png"/><img src="apres1.png"/><img src="avant2.png"/><img src="apres2.png"/><img src="avant3.png"/><img src="apres3.png"/><img src="avant4.png"/><img src="apres4.png"/><img src="avant5.png"/><img src="apres5.png"/><img src="avant6.png"/><img src="apres6.png"/></div>
+<div class="carousel-wrapper"><div class="carousel"><img src="apres1.png"/><img src="avant1.png"/><img src="apres2.png"/><img src="avant2.png"/><img src="apres3.png"/><img src="avant3.png"/><img src="apres4.png"/><img src="avant4.png"/><img src="apres5.png"/><img src="avant5.png"/><img src="apres6.png"/><img src="avant6.png"/></div></div>
 </section>
 <!-- ÉTAPES -->
 <section>
