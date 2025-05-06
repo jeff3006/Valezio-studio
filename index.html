@@ -319,9 +319,6 @@ footer a:hover {
   margin: 0 auto 4px auto;
 }
 </style><link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&amp;display=swap" rel="stylesheet"/>
-
-
-
 <style>
 /* Étape 1 : Style premium du menu mobile */
 .mobile-menu-panel {
@@ -377,8 +374,6 @@ footer a:hover {
   transform: rotate(90deg);
 }
 </style>
-
-
 <style>
 /* Étape 2 : animation du burger en croix */
 .burger-icon.active span:nth-child(1) {
@@ -395,8 +390,6 @@ footer a:hover {
   transition: all 0.4s ease;
 }
 </style>
-
-
 <style>
 /* Étape 3 : amélioration du contenu du menu mobile */
 .mobile-menu-panel a {
@@ -422,8 +415,6 @@ footer a:hover {
   letter-spacing: 1px;
 }
 </style>
-
-
 <style>
 .mobile-menu-panel a {
   display: flex;
@@ -439,8 +430,6 @@ footer a:hover {
   text-align: center;
 }
 </style>
-
-
 <style>
 @keyframes fadeInUp {
   from {
@@ -468,8 +457,6 @@ footer a:hover {
 .mobile-menu-panel.show a:nth-of-type(8) { animation-delay: 0.8s; }
 .mobile-menu-panel.show a:nth-of-type(9) { animation-delay: 0.9s; }
 </style>
-
-
 <style>
 /* Overlay visuel pour effet de focus */
 .mobile-menu-overlay {
@@ -491,11 +478,6 @@ footer a:hover {
   pointer-events: auto;
 }
 </style>
-
-
-
-
-
 <style>
 .burger-icon {
   display: flex !important;
@@ -509,8 +491,6 @@ footer a:hover {
   z-index: 1000;
 }
 </style>
-
-
 <style>
 /* Fade-in animation for topbar */
 @keyframes fadeInTopbar {
@@ -531,13 +511,111 @@ footer a:hover {
   transform: scale(1.05);
 }
 </style>
+<style>
+@media (max-width: 768px) {
+  .vs-header-main {
+    padding-top: 12px !important;
+  }
+}
+</style>
+<style>
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.vs-logo {
+  animation: fadeInLogo 0.8s ease-out forwards;
+  opacity: 0;
+}
+</style>
+
+
+<style>
+.vs-header-topbar {
+  overflow: hidden;
+  position: relative;
+  height: 28px;
+  background-color: #D4AF37;
+  color: #0F0F0F;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+.vs-header-topbar .marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marqueeLeft 20s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+</style>
+
+
+<style>
+/* WAOUH EFFECT 1 — Explosion maîtrisée */
+.mobile-menu-panel {
+  transform: translateX(100%) scale(0.95);
+  opacity: 0;
+  transition: all 0.5s ease;
+  box-shadow: -10px 0 40px rgba(212, 175, 55, 0.08);
+}
+
+.mobile-menu-panel.show {
+  transform: translateX(0%) scale(1.01);
+  opacity: 1;
+  box-shadow: -12px 0 60px rgba(212, 175, 55, 0.12);
+}
+
+.mobile-menu-panel a {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUpLink 0.6s ease forwards;
+}
+
+.mobile-menu-panel.show a:nth-of-type(1) { animation-delay: 0.1s; }
+.mobile-menu-panel.show a:nth-of-type(2) { animation-delay: 0.2s; }
+.mobile-menu-panel.show a:nth-of-type(3) { animation-delay: 0.3s; }
+.mobile-menu-panel.show a:nth-of-type(4) { animation-delay: 0.4s; }
+.mobile-menu-panel.show a:nth-of-type(5) { animation-delay: 0.5s; }
+.mobile-menu-panel.show a:nth-of-type(6) { animation-delay: 0.6s; }
+.mobile-menu-panel.show a:nth-of-type(7) { animation-delay: 0.7s; }
+.mobile-menu-panel.show a:nth-of-type(8) { animation-delay: 0.8s; }
+.mobile-menu-panel.show a:nth-of-type(9) { animation-delay: 0.9s; }
+
+@keyframes fadeInUpLink {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 
 </head>
 <body>
 <header class="vs-header">
-<div class="vs-header-topbar">Relookez sans stress. Sublimez sans travaux. Vivez Valezio.</div>
+<div class="vs-header-topbar"><div class="marquee">Relookez sans stress. Sublimez sans travaux. Vivez Valezio.</div></div>
 <div class="vs-header-main">
-<a href="index.html"><img alt="Valezio Logo" class="vs-logo" src="logo-valezio.PNG"/></a>
+<a href="index.html"><img alt="Valezio Logo" class="vs-logo" src="logo-valezio.png"/></a>
 <nav class="vs-nav">
 <a href="index.html">Accueil</a>
 <a href="valezio-realisations.html">Nos Réalisations</a>
@@ -549,14 +627,14 @@ footer a:hover {
 <a href="valezio-questions-frequentes.html">Questions fréquentes</a>
 <a href="valezio-contact.html">Contact</a>
 </nav>
-<div class="burger-icon" >
+<div class="burger-icon">
 <span></span><span></span><span></span>
-<div class="burger-label">MENU</div>
+
 </div>
 </div>
 <div class="mobile-menu-panel" id="mobileMenu">
 <h3>Navigation</h3>
-<div class="close-button" >×</div>
+<div class="close-button">×</div>
 <a href="index.html">Accueil</a>
 <a href="valezio-realisations.html">Nos Réalisations</a>
 <a href="valezio-avant-apres.html">Avant / Après</a>
@@ -671,9 +749,6 @@ footer a:hover {
   .burger-icon { display: flex; }
 }
 </style>
-
-
-
 <main>
 <!-- HERO -->
 <section class="hero">
@@ -935,8 +1010,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const burger = document.querySelector(".burger-icon");
@@ -965,8 +1038,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.querySelector(".burger-icon");
@@ -1014,7 +1085,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
-
 <div class="mobile-menu-overlay" id="menuOverlay"></div>
 </body>
 </html>
